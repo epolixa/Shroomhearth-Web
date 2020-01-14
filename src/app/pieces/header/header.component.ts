@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-	private titleText: string; 
-	private bannerSource: string;
-	private taglineText: string;
+	private titleText:string; 
+	private bannerSource:string;
+	private taglineText:string;
 
   constructor() { }
 

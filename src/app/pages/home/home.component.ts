@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TwitchService } from '../../twitch.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'bityard-home',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+	private twitchServiceSubscription:Subscription;
+
+	private streams:any;
+
+  constructor(private twitchService:TwitchService) { }
 
   ngOnInit() {
+  	this.twitchServiceSubscription = this.twitchService.getTwitch().subscribe(response => {
+  		console.log(response);
+  	});
   }
 
 }
