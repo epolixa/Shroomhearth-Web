@@ -1,0 +1,18 @@
+{
+	"members": [
+		{
+			"name": "epolixa",
+			"bio": "Owner of the Bityard Minecraft Server",
+			"socials": [
+				{
+					"label": "Twitter",
+					"url": "https://twitter.com/epolixa",
+					"icon": ""
+				}
+			],
+			"twitch": {
+				"username": "epolixa"
+			}
+		}
+	]
+}
