@@ -1,5 +1,12 @@
 <div id="home" class='home'>
 	<div class="home-inner">
-		home
+		<div class="home-videos container">
+			<h3>Latest Videos</h3>
+			<div class="home-videos-list row">
+				<div class="home-video-card col-4" *ngFor="let video of videos">
+					<bityard-video-card class="card" [video]="video"></bityard-video-card>
+				</div>
+			</div>
+		</div>		
 	</div>
 </div>

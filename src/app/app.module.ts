@@ -7,6 +7,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pieces/header/header.component';
 import { FooterComponent } from './pieces/footer/footer.component';
 import { NavigationComponent } from './pieces/navigation/navigation.component';
+import { VideoCardComponent } from './pieces/video-card/video-card.component';
 
 const appRoutes: Routes = [
 	{path: '', redirectTo: '/home', pathMatch: 'full'},
@@ -20,6 +21,7 @@ const appRoutes: Routes = [
 		HeaderComponent,
 		FooterComponent,
 		NavigationComponent,
+		VideoCardComponent,
 	],
 	imports: [
 		RouterModule.forRoot(appRoutes),

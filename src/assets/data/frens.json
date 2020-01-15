@@ -11,15 +11,23 @@
 				}
 			],
 			"twitch": {
-				"username": "epolixa"
+				"login": "epolixa"
 			}
 		},
 		{
-			"name": "Kitboga",
+			"name": "TheRedGear",
 			"bio": "",
 			"socials": [],
 			"twitch": {
-				"username": "kitboga"
+				"login": "theredgear"
+			}
+		},
+		{
+			"name": "Docsin",
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "doctorsinus"
 			}
 		}
 	]

@@ -1,0 +1,25 @@
+.video-card {
+	margin: 4px;
+	padding: 4px;
+	background-color: green;
+}
+
+.video-card .video-card-link {
+	display: block;
+}
+
+.video-card:hover {
+	background-color: lightgreen;
+}
+
+.video-card .video-card-title {
+	margin-bottom: 4px;
+}
+
+.video-card .video-card-title a {
+	color: white;
+}
+
+.video-card:hover .video-card-title a {
+	color: black;
+}
