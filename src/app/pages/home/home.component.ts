@@ -29,7 +29,8 @@ export class HomeComponent implements OnInit {
   			this.twitchVideosSubs.push(this.twitchService.getVideos(this.users[u]).subscribe(response => {
   				this.videos = this.videos.concat(response.data);
           this.videos.sort((a,b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
-  			}));
+  			  console.log("[home] loaded videos - ", JSON.parse(JSON.stringify(this.videos)));
+        }));
   		}
   	});
   }

@@ -2,6 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
+import { DataViewModule } from 'primeng/dataview';
+import { DropdownModule } from 'primeng/dropdown';
+import { CardModule } from 'primeng/card';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pieces/header/header.component';
@@ -21,12 +26,17 @@ const appRoutes: Routes = [
 		HeaderComponent,
 		FooterComponent,
 		NavigationComponent,
-		VideoCardComponent,
+		VideoCardComponent
 	],
 	imports: [
 		RouterModule.forRoot(appRoutes),
 		BrowserModule,
-		HttpClientModule
+		HttpClientModule,
+		CommonModule,
+		FormsModule,
+		DataViewModule,
+		DropdownModule,
+		CardModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

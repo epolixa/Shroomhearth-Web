@@ -29,6 +29,14 @@
 			"twitch": {
 				"login": "doctorsinus"
 			}
+		},
+		{
+			"name": "Batboy",
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "batboy272"
+			}
 		}
 	]
 }
