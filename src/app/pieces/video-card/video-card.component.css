@@ -1,5 +1,23 @@
-.ui-card .ui-card-title {
+:host ::ng-deep .ui-card .ui-card-body {
+	padding: 0;
+	background-color: mediumseagreen;
+}
+
+:host ::ng-deep .ui-card .ui-card-body:hover {
+	padding: 0;
+	background-color: lightgreen;
+}
+
+:host ::ng-deep .ui-card .ui-card-title {
 	text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+  padding: .5em;
+  margin: 0;
+  font-size: 1em;
+  color: whitesmoke;
+}
+
+:host ::ng-deep .ui-card .ui-card-content .card-img-bottom {
+	width: 100%;
 }

@@ -15,7 +15,12 @@ export class HomeComponent implements OnInit {
 
 	private users:any[];
 	private streams:any[];
-	private videos:any[];
+	private pastBroadcasts:any[];
+
+  private pastBroadcastsSortField:any;
+  private pastBroadcastsSortOrder:any;
+  private pastBroadcastsStreamerKey:any;
+  private pastBroadcastsStreamerOptions:any[] = [];
 
   constructor(private twitchService:TwitchService) { }
 
@@ -24,13 +29,17 @@ export class HomeComponent implements OnInit {
   		this.users = response.data;
   		this.twitchStreamsSub = this.twitchService.getStreams(this.users).subscribe(response => {this.streams = response;});
   		this.twitchVideosSubs = [];
-  		this.videos = [];
+  		this.pastBroadcasts = [];
   		for (var u in this.users) {
   			this.twitchVideosSubs.push(this.twitchService.getVideos(this.users[u]).subscribe(response => {
-  				this.videos = this.videos.concat(response.data);
-          this.videos.sort((a,b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
-  			  console.log("[home] loaded videos - ", JSON.parse(JSON.stringify(this.videos)));
+  				this.pastBroadcasts = this.pastBroadcasts.concat(response.data);
+          this.pastBroadcasts.sort((a,b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
         }));
+
+        this.pastBroadcastsStreamerOptions.push({
+          label: this.users[u].display_name,
+          code: this.users[u].login
+        });
   		}
   	});
   }

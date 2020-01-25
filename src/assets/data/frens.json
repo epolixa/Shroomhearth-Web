@@ -15,7 +15,7 @@
 			}
 		},
 		{
-			"name": "TheRedGear",
+			"name": "RedGear",
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -36,6 +36,14 @@
 			"socials": [],
 			"twitch": {
 				"login": "batboy272"
+			}
+		},
+		{
+			"name": "Kelly",
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "lemadhatterx3"
 			}
 		}
 	]
