@@ -8,33 +8,46 @@ import frens from '../assets/data/frens.json';
 })
 export class TwitchService {
 
-	private clientId:string = "8x2wh8a3rrk24fhfc2bga1mqjbk3me";
+	private clientId:string = "bq5mmoaf4wkpku8gzcwbpr58j0n0l2";
+  private clientSecret:string = "ub9srao1i2a05b2nr1228m0af1e5je";
+  private token:string = "";
+  private appAccessTokenUrl:string = "https://id.twitch.tv/oauth2/token";
 	private usersUrl:string = "https://api.twitch.tv/helix/users";
 	private streamsUrl:string = "https://api.twitch.tv/helix/streams";
 	private videosUrl:string = "https://api.twitch.tv/helix/videos";
 	private headers:HttpHeaders;
   constructor(private http:HttpClient) {
-  	this.headers = new HttpHeaders()
-  		.set("Content-Type", "application/json")
-  		.set("Client-ID", this.clientId);
+  	
   }
 
   getClientId() {
   	return this.clientId;
   }
 
+  getClientSecret() {
+    return this.clientSecret;
+  }
+
+  getAppAccessToken(scope?:string[]): Observable<any> {
+    let headers = new HttpHeaders()
+      .set("Client-Id", this.clientId)
+      .set("Client-Secret", this.clientSecret)
+      .set("Grant-Type", "client_credentials");
+    return this.http.post(this.appAccessTokenUrl, {"headers": headers});
+  }
+
   getUsers(): Observable<any> {
-  	let userLoginList:string[] = [];
-  	for (var m in frens.members) {
-  		if (frens.members[m].twitch && frens.members[m].twitch.login) {
-  			userLoginList.push(frens.members[m].twitch.login);
-  		}
-  	}
-  	return this.http.get(this.usersUrl, {"headers": this.headers, "params": function(){
-  		let params = new HttpParams();
-	  	for (var l in userLoginList) {
-	  		params = params.append("login", userLoginList[l]);
-	  	}
+    let headers = new HttpHeaders()
+      .set("Content-Type", "application/json")
+      .set("Client-Id", this.clientId)
+      .set("Authorization", "Bearer " + this.token);
+  	return this.http.get(this.usersUrl, {"headers": headers, "params": function(){
+      let params = new HttpParams();
+      for (var m in frens.members) {
+        if (frens.members[m].twitch) {
+          params = params.append("login", frens.members[m].twitch.login);
+        }
+      }
 	  	return params;
   	}()});
   }

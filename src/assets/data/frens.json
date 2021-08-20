@@ -1,8 +1,8 @@
 {
 	"members": [
 		{
-			"name": "epolixa",
-			"bio": "Owner of the Bityard Minecraft Server",
+			"name": "epo",
+			"bio": "Owner of the Bityard Minecraft server",
 			"socials": [
 				{
 					"label": "Twitter",
@@ -39,11 +39,27 @@
 			}
 		},
 		{
+			"name": "Hippoopoo",
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "hippoopoo"
+			}
+		},
+		{
+			"name": "Harpy",
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "harpy_the_wise"
+			}
+		},
+		{
 			"name": "Kelly",
 			"bio": "",
 			"socials": [],
 			"twitch": {
-				"login": "lemadhatterx3"
+				"login": "xchillhatterx"
 			}
 		}
 	]

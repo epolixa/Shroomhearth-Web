@@ -14,11 +14,11 @@ import { HeaderComponent } from './pieces/header/header.component';
 import { FooterComponent } from './pieces/footer/footer.component';
 import { NavigationComponent } from './pieces/navigation/navigation.component';
 import { VideoCardComponent } from './pieces/video-card/video-card.component';
-
-const appRoutes: Routes = [
-	{path: '', redirectTo: '/home', pathMatch: 'full'},
-	{path: 'home', component: HomeComponent}
-];
+import { AppRoutingModule } from './app-routing.module';
+import { AboutComponent } from './pages/about/about.component';
+import { LiveComponent } from './pages/live/live.component';
+import { MinecraftComponent } from './pages/minecraft/minecraft.component';
+import { DownloadsComponent } from './pages/downloads/downloads.component';
 
 @NgModule({
 	declarations: [
@@ -27,17 +27,21 @@ const appRoutes: Routes = [
 		HeaderComponent,
 		FooterComponent,
 		NavigationComponent,
-		VideoCardComponent
+		VideoCardComponent,
+		AboutComponent,
+		LiveComponent,
+		MinecraftComponent,
+		DownloadsComponent
 	],
 	imports: [
-		RouterModule.forRoot(appRoutes),
 		BrowserModule,
 		HttpClientModule,
 		CommonModule,
 		FormsModule,
 		DataViewModule,
 		DropdownModule,
-		CardModule
+		CardModule,
+		AppRoutingModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

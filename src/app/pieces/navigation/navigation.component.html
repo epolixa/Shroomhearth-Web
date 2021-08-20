@@ -1,1 +1,9 @@
-<p>navigation works!</p>
+<div id="navigation" class="navigation">
+	<div class="navigation-inner">
+		<ul class="navigation-list">
+			<li *ngFor="let link of links" class="navigation-list-item">
+				<a routerLink="{{link.route}}">{{link.label}}</a>
+			</li>
+		</ul>
+	</div>
+</div>

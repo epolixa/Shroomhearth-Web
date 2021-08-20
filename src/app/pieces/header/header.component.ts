@@ -9,6 +9,7 @@ export class HeaderComponent implements OnInit {
 
 	private titleText:string; 
 	private bannerSource:string;
+  private titleLogoSource:string;
 	private taglineText:string;
 
   constructor() { }
@@ -16,7 +17,8 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   	this.titleText = "Bityard";
   	this.bannerSource = "assets/images/header.jpg";
-  	this.taglineText= "This little light of mine";
+    this.titleLogoSource = "assets/images/bityard_logo_2020.png";
+  	this.taglineText= "Minecraft and more!";
   }
 
 }

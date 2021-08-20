@@ -1,3 +1,15 @@
 .header-banner-img {
 	width: 100%;
 }
+
+.header-title {
+	cursor: pointer;
+}
+
+.header-title > * {
+  display: inline-block;
+}
+
+.header-title-img {
+	width: 100px;
+}

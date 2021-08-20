@@ -1,0 +1,55 @@
+<div id="live" class="live">
+	<div class="live-inner">
+
+		<h3>Live</h3>
+
+		<div class="live-past-broadcasts container">
+			<ng-template #noPastBroadcasts>
+				<p>No past broadcasts found</p>
+			</ng-template>
+			<div *ngIf="pastBroadcasts; else noPastBroadcasts" class="live-past-broadcasts-list row">
+				<p-dataView #pastBroadcastsDataView 
+					[value]="pastBroadcasts"
+					[paginator]="true"
+					[rows]="4"
+					filterBy="title"
+					totalRecords="30"
+					layout="grid"
+					paginatorPosition="bottom"
+					pageLinks="3"
+				>
+					<p-header>
+						<div class="dataview-header-row">
+							<h3>Recent Broadcasts</h3>
+						</div>
+						<div class="dataview-header-row ui-g">
+							<div class="dataview-header-control ui-g-12">
+								<p-dropdown
+								placeholder="Streamer"
+								[(ngModel)]="pastBroadcastsStreamerKey"
+								[options]="pastBroadcastsStreamerOptions"
+								></p-dropdown>
+							</div>
+							<div class="dataview-header-control ui-g-12">
+								<p-dropdown
+								placeholder="Order"
+								></p-dropdown>
+							</div>
+							<div class="dataview-header-control dataview-header-filter ui-g-6">
+								<input pInputText 
+								type="search" 
+								placeholder="Filter by title" 
+								(input)="pastBroadcastsDataView.filter($event.target.value)">
+							</div>
+						</div>
+					</p-header>
+					<ng-template let-video pTemplate="gridItem">
+						<div class="live-video-card ui-g-12 ui-md-3">
+							<bityard-video-card class="card" [video]="video"></bityard-video-card>
+						</div>
+					</ng-template>
+				</p-dataView>
+			</div>
+		</div>		
+	</div>
+</div>
