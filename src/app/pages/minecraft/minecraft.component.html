@@ -14,9 +14,10 @@
 		<script src="https://p.trellocdn.com/embed.min.js"></script>
 
 		<div class="players">
-			<span *ngFor="let av of avatars">
-				<img src={{av}}>
-			</span>
+			<div *ngFor="let av of avatars">
+				<img src={{av.src}}>
+				<span class="mctext">{{av.name}}</span>
+			</div>
 		</div>
 
 		<div class="map-container" *ngIf="showBluemap">

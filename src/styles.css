@@ -3,6 +3,13 @@
 /* Rubik */
 @import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
 
+/* Minecraft */
+@import url('https://db.onlinewebfonts.com/c/6ab539c6fc2b21ff0b149b3d06d7f97c?family=Minecraft');
+
 html, body {
 	font-family: 'Rubik', sans-serif;
+}
+
+.mctext {
+	font-family: 'Minecraft';
 }

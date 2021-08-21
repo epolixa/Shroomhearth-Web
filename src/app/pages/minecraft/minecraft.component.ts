@@ -22,12 +22,14 @@ export class MinecraftComponent implements OnInit {
     this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe(response => {
       let uuid = response.players.uuid;
       if (uuid) {
-        let uuids:string[] = Object.values(uuid);
-        for (let u of uuids) {
-          this.minecraftAvatarSub = this.minecraftService.getAvatar(u).subscribe(response => {
+        for (let u in uuid) {
+          this.minecraftAvatarSub = this.minecraftService.getHeadRender(uuid[u]).subscribe(response => {
             let reader = new FileReader();
             reader.addEventListener("load", () => {
-              this.avatars.push(reader.result);
+              this.avatars.push({
+                name: u,
+                src: reader.result
+              });
             }, false);
             if (response) {
               reader.readAsDataURL(response);

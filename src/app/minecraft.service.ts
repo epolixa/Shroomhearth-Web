@@ -10,6 +10,7 @@ export class MinecraftService {
 
   private serverStatusUrl:string = "https://api.mcsrvstat.us/2/"; // https://api.mcsrvstat.us/
   private avatarUrl:string = "https://crafatar.com/avatars/"; // https://crafatar.com/
+  private headRenderUrl:string = "https://crafatar.com/renders/head/";
 
   constructor(private http:HttpClient) {}
 
@@ -18,7 +19,11 @@ export class MinecraftService {
   }
 
   getAvatar(uuid:string): Observable<any> {
-    return this.http.get(this.avatarUrl + uuid, {responseType: 'blob'});
+    return this.http.get(this.avatarUrl + uuid + "?overlay", {responseType: 'blob'});
+  }
+
+  getHeadRender(uuid:string): Observable<any> {
+    return this.http.get(this.headRenderUrl + uuid + "?overlay", {responseType: 'blob'});
   }
 
 }
