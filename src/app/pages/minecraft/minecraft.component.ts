@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { MinecraftService } from '../../minecraft.service';
 
 @Component({
   selector: 'app-minecraft',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MinecraftComponent implements OnInit {
 
-  constructor() { }
+  private showBluemap: boolean = false;
+
+  private minecraftServerStatusSub:Subscription;
+
+  constructor(private minecraftService:MinecraftService) { }
 
   ngOnInit() {
+    this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe();
   }
 
 }
