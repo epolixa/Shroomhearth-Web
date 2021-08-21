@@ -18,7 +18,7 @@ export class MinecraftService {
   }
 
   getAvatar(uuid:string): Observable<any> {
-    return this.http.get(this.avatarUrl + uuid);
+    return this.http.get(this.avatarUrl + uuid, {responseType: 'blob'});
   }
 
 }

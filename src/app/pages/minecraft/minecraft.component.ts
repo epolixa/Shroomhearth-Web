@@ -10,6 +10,7 @@ import { MinecraftService } from '../../minecraft.service';
 export class MinecraftComponent implements OnInit {
 
   private showBluemap: boolean = false;
+  private avatars: any[];
 
   private minecraftServerStatusSub:Subscription;
   private minecraftAvatarSub:Subscription;
@@ -17,12 +18,21 @@ export class MinecraftComponent implements OnInit {
   constructor(private minecraftService:MinecraftService) { }
 
   ngOnInit() {
+    this.avatars = [];
     this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe(response => {
       let uuid = response.players.uuid;
       if (uuid) {
-        let uuids = Object.values(uuid);
+        let uuids:string[] = Object.values(uuid);
         for (let u of uuids) {
-          this.minecraftAvatarSub = this.minecraftService.getAvatar(u).subscribe();
+          this.minecraftAvatarSub = this.minecraftService.getAvatar(u).subscribe(response => {
+            let reader = new FileReader();
+            reader.addEventListener("load", () => {
+              this.avatars.push(reader.result);
+            }, false);
+            if (response) {
+              reader.readAsDataURL(response);
+            }            
+          });
         }
       }
     });
