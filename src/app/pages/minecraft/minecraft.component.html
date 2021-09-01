@@ -18,6 +18,9 @@
 				<img src={{av.src}}>
 				<span class="mctext">{{av.name}}</span>
 			</div>
+			<div *ngIf="avatars.length == 0">
+				<span>No one online :(</span>
+			</div>
 		</div>
 
 		<div class="map-container" *ngIf="showBluemap">

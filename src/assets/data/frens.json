@@ -51,7 +51,7 @@
 			"bio": "",
 			"socials": [],
 			"twitch": {
-				"login": "harpy_the_wise"
+				"login": "polarisplume"
 			}
 		},
 		{
@@ -60,6 +60,14 @@
 			"socials": [],
 			"twitch": {
 				"login": "xchillhatterx"
+			}
+		},
+		{
+			"name": "TechnoToast",
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "technotoast"
 			}
 		}
 	]

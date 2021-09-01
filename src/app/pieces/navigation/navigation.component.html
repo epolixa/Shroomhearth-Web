@@ -1,9 +1,11 @@
-<div id="navigation" class="navigation">
+<nav id="navigation" class="navigation">
 	<div class="navigation-inner">
 		<ul class="navigation-list">
-			<li *ngFor="let link of links" class="navigation-list-item">
-				<a routerLink="{{link.route}}">{{link.label}}</a>
+			<li *ngFor="let link of links" class="navigation-item">
+				<a class="navigation-link" routerLink="{{link.route}}">
+					<span class="navigation-text">{{ link.label }}</span>
+				</a>
 			</li>
 		</ul>
 	</div>
-</div>
+</nav>
