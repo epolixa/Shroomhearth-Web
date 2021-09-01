@@ -10,6 +10,7 @@ import { MinecraftService } from '../../minecraft.service';
 export class MinecraftComponent implements OnInit {
 
   private showBluemap: boolean = false;
+  private version: string;
   private avatars: any[];
 
   private minecraftServerStatusSub:Subscription;
@@ -20,6 +21,7 @@ export class MinecraftComponent implements OnInit {
   ngOnInit() {
     this.avatars = [];
     this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe(response => {
+      this.version = response.version;
       let uuid = response.players.uuid;
       if (uuid) {
         for (let u in uuid) {

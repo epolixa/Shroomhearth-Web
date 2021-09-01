@@ -11,36 +11,31 @@ export class LiveComponent implements OnInit {
 
 	private twitchUsersSub:Subscription;
 	private twitchStreamsSub:Subscription;
-	private twitchVideosSubs:Subscription[];
+	private twitchVideosSub:Subscription;
 
-	private users:any[];
-	private streams:any[];
-	private pastBroadcasts:any[];
-
-  private pastBroadcastsSortField:any;
-  private pastBroadcastsSortOrder:any;
-  private pastBroadcastsStreamerKey:any;
-  private pastBroadcastsStreamerOptions:any[] = [];
+	private twitchUsers:any[];
+	private twitchStreams:any[];
+	private twitchVideos:any[];
 
   constructor(private twitchService:TwitchService) { }
 
   ngOnInit() {
   	this.twitchUsersSub = this.twitchService.getUsers().subscribe(response => {
-  		this.users = response.data;
-  		this.twitchStreamsSub = this.twitchService.getStreams(this.users).subscribe(response => {this.streams = response;});
-  		this.twitchVideosSubs = [];
-  		this.pastBroadcasts = [];
-  		for (var u in this.users) {
-  			this.twitchVideosSubs.push(this.twitchService.getVideos(this.users[u]).subscribe(response => {
-  				this.pastBroadcasts = this.pastBroadcasts.concat(response.data);
-          this.pastBroadcasts.sort((a,b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
-        }));
 
-        this.pastBroadcastsStreamerOptions.push({
-          label: this.users[u].display_name,
-          code: this.users[u].login
+  		this.twitchUsers = response.data;
+
+  		this.twitchStreamsSub = this.twitchService.getStreams(this.twitchUsers).subscribe(response => {
+        this.twitchStreams = response.data;
+      });
+
+  		this.twitchVideos = [];
+  		for (var u in this.twitchUsers) {
+  			this.twitchVideosSub = this.twitchService.getVideos(this.twitchUsers[u]).subscribe(response => {
+  				this.twitchVideos = this.twitchVideos.concat(response.data);
+          this.twitchVideos.sort((a,b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
         });
   		}
+
   	});
   }
 

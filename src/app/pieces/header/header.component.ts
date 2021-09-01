@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Subscription } from 'rxjs';
+import { MinecraftService } from '../../minecraft.service';
 
 @Component({
   selector: 'bityard-header',
@@ -12,13 +14,18 @@ export class HeaderComponent implements OnInit {
   private titleLogoSource:string;
 	private taglineText:string;
 
-  constructor() { }
+  private minecraftServerStatusSub:Subscription;
+
+  constructor(private minecraftService:MinecraftService) { }
 
   ngOnInit() {
   	this.titleText = "Bityard";
   	this.bannerSource = "assets/images/header.jpg";
     this.titleLogoSource = "assets/images/bityard_logo_2020.png";
-  	this.taglineText= "Minecraft and more!";
+
+    this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe(response => {
+      this.taglineText = response.motd.html;
+    });
   }
 
 }
