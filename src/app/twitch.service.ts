@@ -1,7 +1,7 @@
 import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable, Subscription } from 'rxjs';
-import frens from '../assets/data/frens.json';
+import frens from 'src/assets/data/frens.json';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +10,7 @@ export class TwitchService {
 
 	private clientId:string = "bq5mmoaf4wkpku8gzcwbpr58j0n0l2";
   private clientSecret:string = "ub9srao1i2a05b2nr1228m0af1e5je";
-  private token:string = "btzu8v988zwb7hvh4i1y4ore84i2fp"; // generated from Twitch CLI
+  private appAccessToken:string = ""; // generate dynamically
   private appAccessTokenUrl:string = "https://id.twitch.tv/oauth2/token";
 	private usersUrl:string = "https://api.twitch.tv/helix/users";
 	private streamsUrl:string = "https://api.twitch.tv/helix/streams";
@@ -18,29 +18,43 @@ export class TwitchService {
 	private headers:HttpHeaders;
 
   constructor(private http:HttpClient) {
-    this.headers = new HttpHeaders()
-      .set("Content-Type", "application/json")
-      .set("Client-Id", this.clientId)
-      .set("Authorization", "Bearer " + this.token);
+    this.rebuildHeaders();
   }
 
-  getClientId() {
+  getClientId():string {
   	return this.clientId;
   }
 
-  getClientSecret() {
+  getClientSecret():string {
     return this.clientSecret;
   }
 
-  getAppAccessToken(scope?:string[]): Observable<any> {
-    let headers = new HttpHeaders()
+  getAppAccessToken():string {
+    return this.appAccessToken;
+  }
+
+  setAppAccessToken(appAccessToken:string) {
+    this.appAccessToken = appAccessToken;
+  }
+
+  rebuildHeaders() {
+    this.headers = new HttpHeaders()
+      .set("Content-Type", "application/json")
       .set("Client-Id", this.clientId)
-      .set("Client-Secret", this.clientSecret)
-      .set("Grant-Type", "client_credentials");
-    return this.http.post(this.appAccessTokenUrl, {"headers": headers});
+      .set("Authorization", "Bearer " + this.appAccessToken);
+  }
+
+  requestAppAccessToken(scope?:string[]):Observable<any> {
+    let parameters = {
+      "client_id": this.clientId,
+      "client_secret": this.clientSecret,
+      "grant_type": "client_credentials"
+    }
+    return this.http.post(this.appAccessTokenUrl, parameters);   
   }
 
   getUsers(): Observable<any> {
+    this.rebuildHeaders();
   	return this.http.get(this.usersUrl, {"headers": this.headers, "params": function(){
       let params = new HttpParams();
       for (var m in frens.members) {

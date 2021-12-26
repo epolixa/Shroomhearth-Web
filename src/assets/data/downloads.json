@@ -1,0 +1,9 @@
+{
+    "worlds": [
+        {
+            "title": "World 1",
+            "thumbnail": "assets/images/thumbnail/world_1.png",
+            "path": "assets/data/downloads/world_1.zip"
+        }
+    ]
+}

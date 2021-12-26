@@ -8,14 +8,19 @@ import frens from '../assets/data/frens.json';
 })
 export class MinecraftService {
 
+  private address:string = "102.129.206.145";
   private serverStatusUrl:string = "https://api.mcsrvstat.us/2/"; // https://api.mcsrvstat.us/
   private avatarUrl:string = "https://crafatar.com/avatars/"; // https://crafatar.com/
   private headRenderUrl:string = "https://crafatar.com/renders/head/";
 
   constructor(private http:HttpClient) {}
 
-  getServerStatus(address:string): Observable<any> {
-    return this.http.get(this.serverStatusUrl + address);
+  getAddress():string {
+    return this.address;
+  }
+
+  getServerStatus(address?:string): Observable<any> {
+    return this.http.get(this.serverStatusUrl + (address ? address : this.address));
   }
 
   getAvatar(uuid:string): Observable<any> {

@@ -20,7 +20,7 @@ export class MinecraftComponent implements OnInit {
 
   ngOnInit() {
     this.avatars = [];
-    this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe(response => {
+    this.minecraftServerStatusSub = this.minecraftService.getServerStatus().subscribe(response => {
       this.version = response.version;
       let uuid = response.players.uuid;
       if (uuid) {

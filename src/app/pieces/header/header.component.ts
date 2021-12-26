@@ -23,7 +23,7 @@ export class HeaderComponent implements OnInit {
   	this.bannerSource = "assets/images/header.jpg";
     this.titleLogoSource = "assets/images/bityard_logo_2020.png";
 
-    this.minecraftServerStatusSub = this.minecraftService.getServerStatus("104.243.41.80").subscribe(response => {
+    this.minecraftServerStatusSub = this.minecraftService.getServerStatus().subscribe(response => {
       this.taglineText = response.motd.html;
     });
   }
