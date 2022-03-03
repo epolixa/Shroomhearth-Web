@@ -4,10 +4,7 @@
 		<h3>Live</h3>
 
 		<div class="live-streams">
-			<ng-template #noTwitchStreams>
-				<p>No streams found</p>
-			</ng-template>
-			<div *ngIf="twitchStreams; else noTwitchStreams">
+			<div *ngIf="twitchStreams.length > 0">
 				<h4>Streaming Now</h4>
 				<mat-tab-group class="streams-tab-group">
 					<mat-tab *ngFor="let stream of twitchStreams" class="streams-tab">
@@ -22,16 +19,15 @@
 						<p class="streams-tab-playing">Playing <span class="streams-tab-playing-game">{{ stream.game_name }}</span></p>
 					</mat-tab>
 				</mat-tab-group>
+				<hr class="live-divider">
 			</div>
 		</div>
-
-		<hr class="live-divider">
 
 		<div class="live-videos">
 			<ng-template #noTwitchVideos>
 				<p>No past broadcasts found</p>
 			</ng-template>
-			<div *ngIf="twitchVideos; else noTwitchVideos">
+			<div *ngIf="twitchVideos.length > 0; else noTwitchVideos">
 				<h4>Past Broadcasts</h4>
 				<div class="live-videos-list">
 					<bityard-video-card *ngFor="let video of twitchVideos" class="card" [video]="video">
