@@ -2,7 +2,7 @@
 	<a class="video-card-link" [href]="video.url">
 	<mat-card-header class="video-card-header">
 		<mat-card-title class="video-card-title">{{video.title}}</mat-card-title>
-		<mat-card-subtitle class="video-card-subtitle">{{video.user_name}}</mat-card-subtitle>
+		<mat-card-subtitle class="video-card-subtitle">{{video.user_name}} - {{video.created_at | date}} - {{video.duration}}</mat-card-subtitle>
 	</mat-card-header>
 	<div class="video-card-thumbnail"><img class="video-card-thumbnail-img" src={{video.thumbnail_url}}></div>
 	</a>
