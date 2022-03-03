@@ -16,6 +16,13 @@
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Rubik', "Helvetica Neue", sans-serif; }
 
+a {
+	color: var(--color-cyan);
+}
+a:hover {
+	color: var(--color-cyan-light);
+}
+
 .mctext {
 	font-family: 'Minecraft';
 }
