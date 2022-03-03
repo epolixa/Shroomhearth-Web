@@ -1,6 +1,12 @@
 {
     "worlds": [
         {
+            "title": "Minesmash",
+            "thumbnail": "assets/images/thumbnail/minesmash.png",
+            "description": "The world of Minesmash, precursor to Bityard and Shroomhearth",
+            "path": "assets/data/downloads/minesmash.zip"
+        },
+        {
             "title": "World 1",
             "thumbnail": "assets/images/thumbnail/world_1.png",
             "description": "The first Minecraft world of Shroomhearth",
@@ -9,19 +15,19 @@
         {
             "title": "World 2",
             "thumbnail": "assets/images/thumbnail/world_2.png",
-            "description": "world 2",
+            "description": "The second world of Shroomhearth, introducing command block and resource pack features",
             "path": "assets/data/downloads/world_2.zip"
         },
         {
             "title": "World 3",
             "thumbnail": "assets/images/thumbnail/world_3.png",
-            "description": "world 3",
+            "description": "The third world of Shroomhearth that experimented with a custom forge modpack (see Resources)",
             "path": "assets/data/downloads/world_3.zip"
         },
         {
             "title": "World 4",
             "thumbnail": "assets/images/thumbnail/world_4.png",
-            "description": "world 4",
+            "description": "The fourth world of Shroomhearth with a departure from modded in favor of a vanilla datapack",
             "path": "assets/data/downloads/world_4.zip"
         }
     ]
