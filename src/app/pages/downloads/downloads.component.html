@@ -1,14 +1,23 @@
 <div id="downloads" class="downloads">
     <div class="downloads-inner">
 
-        <h3>Downloads</h3>
+        <div class="page-title">
+			<div class="page-title-inner">
+				<h3 class="page-title-text mctext">{{ pageTitle }}</h3>
+			</div>
+		</div>
 
-        <div class="world-downloads">
-            <h4>Worlds</h4>
-            <div class="world-downloads-list">
-                <shroomhearth-download-card *ngFor="let download of worlds" [download]="download"></shroomhearth-download-card>
+        <div class="content-section-shadow"></div>
+
+        <div class="page-content">
+            <div class="world-downloads">
+                <h4>Worlds</h4>
+                <div class="world-downloads-list">
+                    <shroomhearth-download-card *ngFor="let download of worlds" [download]="download">
+                    </shroomhearth-download-card>
+                </div>
             </div>
         </div>
-        
+
     </div>
 </div>

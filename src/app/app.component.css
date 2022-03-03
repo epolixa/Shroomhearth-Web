@@ -1,5 +1,7 @@
+.main-container-inner {
+    background-image: url("/assets/images/mushroom_stemx128.png");
+}
+
 .content-section {
-    width: 95%;
-    max-width: 1440px;
-    margin: auto;
+    position: relative;
 }

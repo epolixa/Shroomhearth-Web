@@ -1,31 +1,39 @@
 <div id="minecraft" class="minecraft">
 	<div class="minecraft-inner">
 
-		<h3>Minecraft</h3>
-
-		<div class="server-info">
-			<p>IP: http://104.219.7.153</p>
-			<p>version: {{ version }}</p>
-		</div>
-
-		<blockquote class="trello-board-compact">
-		  <a href="https://trello.com/b/FGQWITBD/bityard">Trello Board</a>
-		</blockquote>
-		<script src="https://p.trellocdn.com/embed.min.js"></script>
-
-		<div class="players">
-			<div *ngFor="let av of avatars">
-				<img src={{av.src}}>
-				<span class="mctext">{{av.name}}</span>
-			</div>
-			<div *ngIf="avatars.length == 0">
-				<span>No one online :(</span>
+		<div class="page-title">
+			<div class="page-title-inner">
+				<h3 class="page-title-text mctext">{{ pageTitle }}</h3>
 			</div>
 		</div>
 
-		<div class="map-container" *ngIf="showBluemap">
-			<iframe class="map" src="http://104.243.41.80:25570" title="Bityard BlueMap"></iframe>
-		</div>
+		<div class="content-section-shadow"></div>
+
+		<div class="page-content">
+			<div class="server-info">
+				<p>IP: http://104.219.7.153</p>
+				<p>version: {{ version }}</p>
+			</div>
+	
+			<blockquote class="trello-board-compact">
+			  <a href="https://trello.com/b/FGQWITBD/bityard">Trello Board</a>
+			</blockquote>
+			<script src="https://p.trellocdn.com/embed.min.js"></script>
+	
+			<div class="players">
+				<div *ngFor="let av of avatars">
+					<img src={{av.src}}>
+					<span class="mctext">{{av.name}}</span>
+				</div>
+				<div *ngIf="avatars.length == 0">
+					<span>No one online :(</span>
+				</div>
+			</div>
+	
+			<div class="map-container" *ngIf="showBluemap">
+				<iframe class="map" src="http://104.243.41.80:25570" title="Bityard BlueMap"></iframe>
+			</div>
+		</div>		
 
 	</div>
 </div>

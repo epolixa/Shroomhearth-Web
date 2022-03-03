@@ -9,6 +9,8 @@ import { MinecraftService } from '../../minecraft.service';
 })
 export class MinecraftComponent implements OnInit {
 
+  public pageTitle:string = "Minecraft";
+
   private showBluemap: boolean = false;
   private version: string;
   private avatars: any[];

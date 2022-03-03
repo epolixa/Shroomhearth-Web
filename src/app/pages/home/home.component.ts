@@ -8,6 +8,8 @@ import { ShroomhearthService } from 'src/app/shroomhearth.service';
 })
 export class HomeComponent implements OnInit {
 
+  public pageTitle:string = "Welcome to Shroomhearth";
+
   public shroomhearthName:string;
 
   constructor(

@@ -9,6 +9,8 @@ import downloads from 'src/assets/data/downloads.json';
 })
 export class DownloadsComponent implements OnInit {
 
+  public pageTitle:string = "Downloads";
+
   public worlds: any;
 
   constructor() { }

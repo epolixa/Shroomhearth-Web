@@ -9,6 +9,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LiveComponent implements OnInit {
 
+	public pageTitle:string = "Live";
+
 	private twitchAppAccessTokenSub: Subscription;
 	private twitchUsersSub: Subscription;
 	private twitchStreamsSub: Subscription;
