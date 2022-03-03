@@ -16,21 +16,35 @@
 	background: linear-gradient(0deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%);
 }
 
+.header-title-wrap {
+	width: 95%;
+	max-width: 1440px;
+	margin: auto;
+}
+
 .header-title {
 	position: relative;
 	margin-top: -100px;
 	cursor: pointer;
+	display: flex;
+	align-items: flex-start;
+	width: 100%;
 }
 
 .header-title > * {
-  display: inline-block;
-  margin: 0px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .header-title-img {
 	width: 100px;
 	border-top-left-radius: 12px;
 	border-top-right-radius: 12px;
+}
+
+.header-title-wordart {
+	width: 200px;
+	margin-top: -15px;
 }
 
 .header-title-text {
@@ -41,4 +55,5 @@
 .header-tagline {
 	color: var(--color-beige);
 	text-shadow: -2px 2px #000;
+	justify-self: flex-end;
 }

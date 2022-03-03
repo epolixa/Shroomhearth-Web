@@ -13,6 +13,7 @@ export class HeaderComponent implements OnInit {
   private titleText: string;
   private bannerSource: string;
   private titleLogoSource: string;
+  private titleWordartSource: string;
   private taglineText: string;
 
   private minecraftServerStatusSub: Subscription;
@@ -26,6 +27,7 @@ export class HeaderComponent implements OnInit {
     this.titleText = this.shroomhearth.getName();
     this.bannerSource = "assets/images/header.jpg";
     this.titleLogoSource = "assets/images/shroomhearth_logo_2021.png";
+    this.titleWordartSource = "assets/images/shroomhearth_wordart_transparent.png";
 
     this.minecraftServerStatusSub = this.minecraftService.getServerStatus().subscribe(response => {
       this.taglineText = response.motd.html;

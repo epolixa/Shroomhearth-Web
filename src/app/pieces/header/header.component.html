@@ -1,14 +1,17 @@
 <div id="header" class="header">
 	<div class="header-inner">
 		<div class="header-banner">
-			<img class="header-banner-img" [src]="bannerSource"/>
+			<img class="header-banner-img" [src]="bannerSource" />
 			<div class="header-banner-overlay"></div>
 		</div>
 
-		<div routerLink="" class="header-title">
-			<img class="header-title-img" [src]="titleLogoSource"/>
-			<h1 class="header-title-text mctext">{{titleText}}</h1>
-			<p class="header-tagline" [innerHtml]="taglineText"></p>
+		<div class="header-title-wrap">
+			<div routerLink="" class="header-title">
+				<img class="header-title-img" [src]="titleLogoSource" />
+				<img class="header-title-wordart" [src]="titleWordartSource">
+				<p class="header-tagline mctext" [innerHtml]="taglineText"></p>
+			</div>
 		</div>
+
 	</div>
 </div>
