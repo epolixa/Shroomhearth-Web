@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShroomhearthService } from 'src/app/shroomhearth.service';
 
 @Component({
   selector: 'app-about',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  public shroomhearthName:string;
+
+  constructor(
+    private shroomhearth:ShroomhearthService
+  ) { }
 
   ngOnInit() {
+    this.shroomhearthName = this.shroomhearth.getName();
   }
 
 }

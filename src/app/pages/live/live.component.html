@@ -3,28 +3,41 @@
 
 		<h3>Live</h3>
 
-		<div class="live-streams container">
+		<div class="live-streams">
 			<ng-template #noTwitchStreams>
 				<p>No streams found</p>
 			</ng-template>
-			<div *ngIf="twitchStreams; else noTwitchStreams" class="live-streams-list row">
-				<h4>Streams</h4>
-				<div *ngFor="let stream of twitchStreams">
-					<p><a [href]="'https://twitch.tv/' + stream.user_login" target="_blank">{{ stream.user_name }} is live!</a> {{ stream.title }}</p>
-				</div>
+			<div *ngIf="twitchStreams; else noTwitchStreams">
+				<h4>Streaming Now</h4>
+				<mat-tab-group class="streams-tab-group">
+					<mat-tab *ngFor="let stream of twitchStreams" class="streams-tab">
+						<ng-template mat-tab-label class="streams-tab-label">
+							<img [src]="getUserFromStream(stream.user_id).profile_image_url" height="100px">
+						</ng-template>
+						<div class=streams-tab-thumbnail><img [src]="getStreamThumbnailUrl(stream.thumbnail_url)"></div>
+						<button class=streams-tab-watch-live><a [href]="'https://twitch.tv/' + stream.user_login" target="_blank">Watch Live on Twitch</a></button>
+						<span class="streams-tab-username">{{ stream.user_name }}</span>
+						<p class="streams-tab-title">{{ stream.title }}</p>
+						<p class="streams-tab-description">{{ getUserFromStream(stream.user_id).description }}</p>
+						<p class="streams-tab-playing">Playing <span class="streams-tab-playing-game">{{ stream.game_name }}</span></p>
+					</mat-tab>
+				</mat-tab-group>
 			</div>
-		</div>	
+		</div>
 
-		<div class="live-videos container">
+		<hr class="live-divider">
+
+		<div class="live-videos">
 			<ng-template #noTwitchVideos>
 				<p>No past broadcasts found</p>
 			</ng-template>
-			<div *ngIf="twitchVideos; else noTwitchVideos" class="live-videos-list row">
+			<div *ngIf="twitchVideos; else noTwitchVideos">
 				<h4>Past Broadcasts</h4>
-				<div *ngFor="let video of twitchVideos">
-					<bityard-video-card class="card" [video]="video"></bityard-video-card>
+				<div class="live-videos-list">
+					<bityard-video-card *ngFor="let video of twitchVideos" class="card" [video]="video">
+					</bityard-video-card>
 				</div>
 			</div>
-		</div>		
+		</div>
 	</div>
 </div>

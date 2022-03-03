@@ -14,7 +14,7 @@ export class LiveComponent implements OnInit {
 	private twitchStreamsSub: Subscription;
 	private twitchVideosSub: Subscription;
 
-	private twitchUsers: any[];
+	public twitchUsers: any[];
 	private twitchStreams: any[];
 	private twitchVideos: any[];
 
@@ -30,19 +30,29 @@ export class LiveComponent implements OnInit {
 
 				this.twitchStreamsSub = this.twitchService.getStreams(this.twitchUsers).subscribe(response => {
 					this.twitchStreams = response.data;
+					this.twitchStreams.sort((a, b) => (a.started_at > b.started_at) ? -1 : ((b.started_at > a.started_at) ? 1 : 0));
 				});
 
 				this.twitchVideos = [];
 				for (var u in this.twitchUsers) {
 					this.twitchVideosSub = this.twitchService.getVideos(this.twitchUsers[u]).subscribe(response => {
 						this.twitchVideos = this.twitchVideos.concat(response.data);
+						this.twitchVideos = this.twitchVideos.filter(v => v.thumbnail_url.length > 0); // exclude vods of incomplete streams
 						this.twitchVideos.sort((a, b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
 					});
 				}
-
+				
 			});
 		});
 
+	}
+
+	getUserFromStream(userId:string) {
+		return this.twitchUsers.find(u => u.id == userId);
+	}
+
+	getStreamThumbnailUrl(url:string) {
+		return url.replace("{width}", "320").replace("{height}", "180");
 	}
 
 }

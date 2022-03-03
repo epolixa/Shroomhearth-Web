@@ -2,7 +2,10 @@
 	"members": [
 		{
 			"name": "epo",
-			"bio": "Owner of the Bityard Minecraft server",
+			"minecraft": {
+				"uuid": "5bbc1e4f-c747-475f-8b12-9f40e8316da2"
+			},
+			"bio": "Owner of Shroomhearth SMP",
 			"socials": [
 				{
 					"label": "Twitter",
@@ -16,6 +19,9 @@
 		},
 		{
 			"name": "Kroteux",
+			"minecraft": {
+				"uuid": "8894fc00-b4bd-47b5-b273-b2c96104e99b"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -24,6 +30,9 @@
 		},
 		{
 			"name": "RedGear",
+			"minecraft": {
+				"uuid": "e87400ad-bddf-49af-b4fd-c4b1b839ad34"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -32,6 +41,9 @@
 		},
 		{
 			"name": "Docsin",
+			"minecraft": {
+				"uuid": "0c613b9a-1530-4c89-b7af-908917a0bd6f"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -40,6 +52,9 @@
 		},
 		{
 			"name": "Batboy",
+			"minecraft": {
+				"uuid": "8f6a500f-bf17-47da-9e62-777c977d5c8d"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -48,6 +63,9 @@
 		},
 		{
 			"name": "Hippoopoo",
+			"minecraft": {
+				"uuid": "eb2a233f-1d0d-42de-814f-670b525c31c2"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -56,6 +74,9 @@
 		},
 		{
 			"name": "Harpy",
+			"minecraft": {
+				"uuid": "6b823c03-852f-4a2b-ba0f-3507538809a4"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {
@@ -72,6 +93,9 @@
 		},
 		{
 			"name": "TechnoToast",
+			"minecraft": {
+				"uuid": "97c753c0-dbeb-4cd8-a430-870ac8c76dbc"
+			},
 			"bio": "",
 			"socials": [],
 			"twitch": {

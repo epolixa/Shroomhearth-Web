@@ -34,11 +34,11 @@
 }
 
 .header-title-text {
-	color: #fff;
+	color: var(--color-beige);
 	text-shadow: -2px 2px #000;
 }
 
 .header-tagline {
-	color: #fff;
+	color: var(--color-beige);
 	text-shadow: -2px 2px #000;
 }

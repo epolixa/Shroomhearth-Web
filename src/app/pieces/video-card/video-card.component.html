@@ -1,5 +1,9 @@
-<p-card [styleClass]="video-card" [header]="video.title">
+<mat-card class="video-card">
 	<a class="video-card-link" [href]="video.url">
-		<div class= "video-card-thumbnail"><img class="card-img-bottom" src={{video.thumbnail_url}}></div>
+	<mat-card-header class="video-card-header">
+		<mat-card-title class="video-card-title">{{video.title}}</mat-card-title>
+		<mat-card-subtitle class="video-card-subtitle">{{video.user_name}}</mat-card-subtitle>
+	</mat-card-header>
+	<div class="video-card-thumbnail"><img class="video-card-thumbnail-img" src={{video.thumbnail_url}}></div>
 	</a>
-</p-card>
+</mat-card>

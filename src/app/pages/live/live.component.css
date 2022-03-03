@@ -1,8 +1,34 @@
-.home-video-card {
-	display: inline-block;
+.live-videos-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	gap: 16px;
 }
 
-.dataview-header-control {
- display: inline-block;
- margin-right: 1em;
+:host ::ng-deep .mat-tab-label {
+	height: 100px;
+}
+
+:host ::ng-deep .mat-tab-body {
+	padding-top: 16px;
+}
+
+.streams-tab-thumbnail {
+	float: left;
+	margin-right: 10px;
+}
+
+.streams-tab-username {
+	font-weight: bold;
+	font-size: 20px;
+	color: var(--color-cyan);
+}
+
+.streams-tab-watch-live {
+	position: absolute;
+	right: 0;
+}
+
+.live-divider {
+	border-color: var(--color-cyan);
 }

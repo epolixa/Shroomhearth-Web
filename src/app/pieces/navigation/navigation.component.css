@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    background-color: #54CC54;
+    background-color: var(--color-cyan);
 }
 
 .navigation-list {
@@ -18,7 +18,7 @@
     margin: 0px 4px;
     width: 128px;
     text-align: center;
-    background-color: #8EED90;
+    background-color: var(--color-cyan-light);
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
 }
@@ -30,13 +30,13 @@
     height: 32px;
     padding: 10px 0px;
     text-decoration: none; 
-    color: #EFE6D8;
+    color: var(--color-beige);
 }
 .navigation-link:hover {
     font-size: 16px;
     letter-spacing: 2px;
-    color: #CE2E58;
-    text-shadow: -1px 1px #EFE6D8;
+    color: var(--color-cyan);;
+    text-shadow: -1px 1px var(--color-beige);;
 }
 
 .navigation-text {

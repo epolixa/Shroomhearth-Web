@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ShroomhearthService } from 'src/app/shroomhearth.service';
 
 @Component({
   selector: 'bityard-home',
@@ -7,8 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  public shroomhearthName:string;
 
-  ngOnInit() {}
+  constructor(
+    private shroomhearth:ShroomhearthService
+  ) {}
+
+  ngOnInit() {
+    this.shroomhearthName = this.shroomhearth.getName();
+  }
 
 }

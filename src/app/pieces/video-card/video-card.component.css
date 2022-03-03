@@ -1,23 +1,23 @@
-:host ::ng-deep .ui-card .ui-card-body {
-	padding: 0;
-	background-color: mediumseagreen;
+.video-card {
+  padding: 0;
 }
 
-:host ::ng-deep .ui-card .ui-card-body:hover {
-	padding: 0;
-	background-color: lightgreen;
+.video-card-header {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  padding-top: 8px;
 }
 
-:host ::ng-deep .ui-card .ui-card-title {
-	text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
-  padding: .5em;
-  margin: 0;
-  font-size: 1em;
-  color: whitesmoke;
+.video-card-header .video-card-title {
+  color: var(--color-beige);
+  font-size: 14px;
+  margin-bottom: 8px;
 }
 
-:host ::ng-deep .ui-card .ui-card-content .card-img-bottom {
-	width: 100%;
+.video-card-header .video-card-subtitle {
+  color: var(--color-beige);
+  font-size: 12px;
+  margin-bottom: 6px;
 }
