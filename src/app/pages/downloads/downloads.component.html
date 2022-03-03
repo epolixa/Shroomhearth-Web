@@ -4,28 +4,11 @@
         <h3>Downloads</h3>
 
         <div class="world-downloads">
-            <div class="world-downloads-inner" *ngFor="let world of worlds">
-                <div class="world-download">
-                    <div class="world-download-inner">
-                        <a class="world-download-link" href="{{ world.path }}" target="_blank">
-                            <div class="world-download-background">
-                                <div class="world-download-background-img" [style.background-image]="'url(' + world.thumbnail + ')'"></div>
-                            </div>
-                            <div class="world-download-info">
-                                <p>{{ world.title }}</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+            <h4>Worlds</h4>
+            <div class="world-downloads-list">
+                <shroomhearth-download-card *ngFor="let download of worlds" [download]="download"></shroomhearth-download-card>
             </div>
         </div>
-
-        <p>Minesmash</p>
-        <p>World 1</p>
-        <p>World 2</p>
-        <p>World 3</p>
-        <p>World 3 Modpack</p>
-        <p>World 4</p>
-
+        
     </div>
 </div>

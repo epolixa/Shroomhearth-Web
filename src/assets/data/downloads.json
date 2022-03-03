@@ -3,7 +3,26 @@
         {
             "title": "World 1",
             "thumbnail": "assets/images/thumbnail/world_1.png",
+            "description": "The first Minecraft world of Shroomhearth",
             "path": "assets/data/downloads/world_1.zip"
+        },
+        {
+            "title": "World 2",
+            "thumbnail": "assets/images/thumbnail/world_2.png",
+            "description": "world 2",
+            "path": "assets/data/downloads/world_2.zip"
+        },
+        {
+            "title": "World 3",
+            "thumbnail": "assets/images/thumbnail/world_3.png",
+            "description": "world 3",
+            "path": "assets/data/downloads/world_3.zip"
+        },
+        {
+            "title": "World 4",
+            "thumbnail": "assets/images/thumbnail/world_4.png",
+            "description": "world 4",
+            "path": "assets/data/downloads/world_4.zip"
         }
     ]
 }

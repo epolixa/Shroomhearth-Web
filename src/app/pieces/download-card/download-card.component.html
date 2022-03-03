@@ -1,0 +1,12 @@
+<mat-card class="download-card">
+	<a class="download-card-link" [href]="download.path" download>
+	<mat-card-header class="download-card-header">
+		<mat-card-title class="download-card-title">{{ download.title }}</mat-card-title>
+		<mat-card-subtitle class="download-card-subtitle">{{ download.size }}</mat-card-subtitle>
+	</mat-card-header>
+	<div class="download-card-thumbnail"><img class="download-card-thumbnail-img" src={{download.thumbnail}}></div>
+    <mat-card-content>
+        <p>{{ download.description }}</p>
+    </mat-card-content>
+	</a>
+</mat-card>
