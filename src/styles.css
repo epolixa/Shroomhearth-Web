@@ -45,6 +45,7 @@ a:hover {
 }
 
 .page-content {
+	min-height: 500px;
 	width: 90%;
     max-width: 1440px;
     margin: auto;

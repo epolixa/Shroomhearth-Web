@@ -17,6 +17,7 @@ import { DownloadsComponent } from './pages/downloads/downloads.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material';
+import { MatIconModule } from '@angular/material';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
 
 @NgModule({
@@ -41,7 +42,8 @@ import { DownloadCardComponent } from './pieces/download-card/download-card.comp
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		MatCardModule,
-		MatTabsModule
+		MatTabsModule,
+		MatIconModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

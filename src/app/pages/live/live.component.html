@@ -32,10 +32,10 @@
 	
 			<div class="live-videos">
 				<ng-template #noTwitchVideos>
-					<p>No past broadcasts found</p>
+					<p>No recent broadcasts found</p>
 				</ng-template>
 				<div *ngIf="twitchVideos.length > 0; else noTwitchVideos">
-					<h4>Past Broadcasts</h4>
+					<h4>Recent Broadcasts</h4>
 					<div class="live-videos-list">
 						<bityard-video-card *ngFor="let video of twitchVideos" class="card" [video]="video">
 						</bityard-video-card>
