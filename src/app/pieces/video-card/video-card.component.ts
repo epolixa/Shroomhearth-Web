@@ -17,7 +17,6 @@ export class VideoCardComponent implements OnInit {
   ngOnInit() {}
 
   ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
     if (changes.video.currentValue.thumbnail_url) {
     	this.video.thumbnail_url = this.video.thumbnail_url.replace("%{width}", this.thumbnailWidth).replace("%{height}", this.thumbnailHeight);
     }
