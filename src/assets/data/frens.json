@@ -101,6 +101,40 @@
 			"twitch": {
 				"login": "technotoast"
 			}
+		},
+		{
+			"name": "ScrewStatic",
+			"minecraft": {
+				"uuid": ""
+			},
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "screwstatic"
+			}
+		},
+		{
+			"name": "Aerialz",
+			"minecraft": {
+				"uuid": ""
+			},
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "aerialtricks"
+			}
+		},
+		{
+			"name": "Eshizako",
+			"minecraft": {
+				"uuid": ""
+			},
+			"bio": "",
+			"socials": [],
+			"twitch": {
+				"login": "eshizako"
+			}
 		}
+
 	]
 }

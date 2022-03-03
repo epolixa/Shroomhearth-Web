@@ -24,11 +24,31 @@
 	color: var(--color-cyan);
 }
 
+.live-divider {
+	border-color: var(--color-cyan);
+}
+
 .streams-tab-watch-live {
-	position: absolute;
+	background-color: rgb(145, 71, 255);
+	display: inline-flex;
+    position: absolute;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    vertical-align: middle;
+    overflow: hidden;
+    user-select: none;
+    border-radius: 4px;
+    height: 30px;
 	right: 0;
 }
 
-.live-divider {
-	border-color: var(--color-cyan);
+.streams-tab-watch-live a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    white-space: nowrap;
+    user-select: none;
+    font-weight: 600;
+    font-size: 13px;
 }
