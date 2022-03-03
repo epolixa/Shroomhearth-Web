@@ -39,7 +39,7 @@ export class LiveComponent implements OnInit {
 				for (var u in this.twitchUsers) {
 					this.twitchVideosSub = this.twitchService.getVideos(this.twitchUsers[u]).subscribe(response => {
 						this.twitchVideos = this.twitchVideos.concat(response.data);
-						this.twitchVideos = this.twitchVideos.filter(v => v.thumbnail_url.length > 0); // exclude vods of incomplete streams
+						this.twitchVideos = this.twitchVideos.filter(v => this.filterVideo(v));
 						this.twitchVideos.sort((a, b) => (a.created_at > b.created_at) ? -1 : ((b.created_at > a.created_at) ? 1 : 0));
 					});
 				}
@@ -55,6 +55,11 @@ export class LiveComponent implements OnInit {
 
 	getStreamThumbnailUrl(url:string) {
 		return url.replace("{width}", "320").replace("{height}", "180");
+	}
+
+	filterVideo(v:any) {
+		return v.thumbnail_url.length > 0 // exclude vods of incomplete streams
+		&& v.type == "archive"; // only include past broadcasts
 	}
 
 }
