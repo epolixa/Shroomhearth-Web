@@ -1,7 +1,7 @@
 import { Component, OnInit, Input, SimpleChanges } from '@angular/core';
 
 @Component({
-  selector: 'bityard-video-card',
+  selector: 'shroomhearth-video-card',
   templateUrl: './video-card.component.html',
   styleUrls: ['./video-card.component.css']
 })

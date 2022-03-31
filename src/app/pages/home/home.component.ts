@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ShroomhearthService } from 'src/app/shroomhearth.service';
 
 @Component({
-  selector: 'bityard-home',
+  selector: 'shroomhearth-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })

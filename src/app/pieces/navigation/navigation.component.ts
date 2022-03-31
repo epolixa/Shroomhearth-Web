@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-	selector: 'bityard-navigation',
+	selector: 'shroomhearth-navigation',
 	templateUrl: './navigation.component.html',
 	styleUrls: ['./navigation.component.css']
 })

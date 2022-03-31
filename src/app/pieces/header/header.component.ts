@@ -4,7 +4,7 @@ import { ShroomhearthService } from 'src/app/shroomhearth.service';
 import { MinecraftService } from '../../minecraft.service';
 
 @Component({
-  selector: 'bityard-header',
+  selector: 'shroomhearth-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })

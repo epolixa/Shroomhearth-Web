@@ -37,8 +37,8 @@
 				<div *ngIf="twitchVideos.length > 0; else noTwitchVideos">
 					<h4>Recent Broadcasts</h4>
 					<div class="live-videos-list">
-						<bityard-video-card *ngFor="let video of twitchVideos" class="card" [video]="video">
-						</bityard-video-card>
+						<shroomhearth-video-card *ngFor="let video of twitchVideos" class="card" [video]="video">
+						</shroomhearth-video-card>
 					</div>
 				</div>
 			</div>
