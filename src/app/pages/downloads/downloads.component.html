@@ -12,6 +12,10 @@
         <div class="page-content">
             <div class="world-downloads">
                 <h4>Worlds</h4>
+                <div class="world-downloads-disclaimer">
+                    <p>These world archives are provided as-is and some assembly may be required to get them working in your preferred version of Minecraft. It is advised to run "Optimize World" before loading them in modern versions of Minecraft.</p>
+                </div>
+                <br>
                 <div class="world-downloads-list">
                     <shroomhearth-download-card *ngFor="let download of worlds" [download]="download">
                     </shroomhearth-download-card>

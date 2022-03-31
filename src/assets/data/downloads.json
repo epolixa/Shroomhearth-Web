@@ -4,31 +4,31 @@
             "title": "Minesmash",
             "thumbnail": "assets/images/thumbnail/minesmash.png",
             "description": "The world of Minesmash, precursor to Bityard and Shroomhearth",
-            "path": "assets/data/downloads/minesmash.zip"
+            "path": "https://epolixa.com/shroomhearth/downloads/MINESMASH_20160501_1.8.3_FINAL.zip"
         },
         {
             "title": "World 1",
             "thumbnail": "assets/images/thumbnail/world_1.png",
             "description": "The first Minecraft world of Shroomhearth",
-            "path": "assets/data/downloads/world_1.zip"
+            "path": "https://epolixa.com/shroomhearth/downloads/WORLD_1_20161011_1.10_FINAL.zip"
         },
         {
             "title": "World 2",
             "thumbnail": "assets/images/thumbnail/world_2.png",
             "description": "The second world of Shroomhearth, introducing command block and resource pack features",
-            "path": "assets/data/downloads/world_2.zip"
+            "path": "https://epolixa.com/shroomhearth/downloads/WORLD_2_20170527_1.11.2_FINAL.zip"
         },
         {
             "title": "World 3",
             "thumbnail": "assets/images/thumbnail/world_3.png",
             "description": "The third world of Shroomhearth that experimented with a custom forge modpack (see Resources)",
-            "path": "assets/data/downloads/world_3.zip"
+            "path": "https://epolixa.com/shroomhearth/downloads/WORLD_3_20180402_forge1.12.1.14.22.1.2485_FINAL.zip"
         },
         {
             "title": "World 4",
             "thumbnail": "assets/images/thumbnail/world_4.png",
             "description": "The fourth world of Shroomhearth with a departure from modded in favor of a vanilla datapack",
-            "path": "assets/data/downloads/world_4.zip"
+            "path": "https://epolixa.com/shroomhearth/downloads/WORLD_4_20211203_1.17.1_FINAL.zip"
         }
     ]
 }
