@@ -23,6 +23,10 @@ a:hover {
 	color: var(--color-cyan-light);
 }
 
+hr {
+	border-top-color: #333;
+}
+
 .mctext {
 	font-family: 'Minecraft';
 }
