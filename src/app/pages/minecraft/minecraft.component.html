@@ -11,29 +11,66 @@
 
 		<div class="page-content">
 			<div class="server-info">
-				<p>IP: http://104.219.7.153</p>
-				<p>version: {{ version }}</p>
+				<h4>Server Info:</h4>
+				<p>IP: {{ ip }}</p>
+				<p [ngClass]="{'online': online, 'offline': !online}">Status: <span>{{ online ? "Online" : "Offline"}}</span></p>
+				<p *ngIf="online">Version: {{ version }}</p>
 			</div>
-	
-			<blockquote class="trello-board-compact">
-			  <a href="https://trello.com/b/FGQWITBD/bityard">Trello Board</a>
-			</blockquote>
-			<script src="https://p.trellocdn.com/embed.min.js"></script>
-	
+
+			<div class="datapack-info">
+				<p>The server utilizes a bespoke datapack for additional gameplay features, including:</p>
+				<ul>
+					<li>Many advancements to guide through Shroomhearth's features as well as player-made challenges</li>
+					<li>The Porcelain, a creative mode custom dimension</li>
+					<li>An evolved Ender Dragon fight</li>
+					<li>And more...!</li>
+				</ul>
+				<p>Check out the datapack <a href="https://github.com/epolixa/Shroomhearth-Datapack" target="_blank">source</a> or view the <a href="https://github.com/epolixa/Shroomhearth-Datapack/wiki" target="_blank">wiki</a> for more information.</p>
+			</div>
+
+			<div class="fabric-info">
+				<p>The server runs on Fabric with some server-side mods:</p>
+				<ul>
+					<li><a href="https://www.curseforge.com/minecraft/mc-mods/lithium">Lithium</a></li>
+					<li><a href="https://github.com/epolixa/Shroomhearth-Fabric" target="_blank">Shroomhearth's own Fabric mod</a></li>
+				</ul>
+				<p>You can still connect to the server with a vanilla Minecraft client.</p>
+			</div>
+
+			<hr>
+
 			<div class="players">
+				<h5>{{ avatars.length }} Players Online:</h5>
 				<div *ngFor="let av of avatars">
 					<img src={{av.src}}>
 					<span class="mctext">{{av.name}}</span>
 				</div>
 				<div *ngIf="avatars.length == 0">
-					<span>No one online :(</span>
+					<h5>No Players Online...</h5>
 				</div>
 			</div>
-	
-			<div class="map-container" *ngIf="showBluemap">
-				<iframe class="map" src="http://104.243.41.80:25570" title="Bityard BlueMap"></iframe>
+
+			<hr>
+
+			<h5>Check out what we're working on with Trello:</h5>
+			<blockquote class="trello-board-compact">
+				<a href="https://trello.com/b/FGQWITBD/shroomhearth-smp" target="_blank">Trello Board</a>
+			</blockquote>
+			<!--<script src="https://p.trellocdn.com/embed.min.js"></script>-->
+
+			<hr>
+
+			<div class="bluemap-section">
+				<div class="bluemap-controls">
+					<button class="bluemap-toggle" (click)="toggleBluemap()">{{ (showBluemap ? "Hide" : "Show") + "
+						Bluemap" }}</button> or <a [href]="bluemapUrl" target="_blank">open in new tab</a>
+				</div>
+				<br>
+				<div class="bluemap-container" *ngIf="showBluemap">
+					<iframe class="bluemap" [src]="safeBluemapUrl" title="Shroomhearth BlueMap"></iframe>
+				</div>
 			</div>
-		</div>		
+		</div>
 
 	</div>
 </div>
