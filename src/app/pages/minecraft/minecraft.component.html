@@ -36,6 +36,20 @@
 
 			<hr>
 
+			<!--<div class="bluemap-section">
+				<div class="bluemap-controls">
+					<button class="bluemap-toggle" (click)="toggleBluemap()">{{ (showBluemap ? "Hide" : "Show") + "
+						Bluemap" }}</button> or <a [href]="bluemapUrl" target="_blank">open in new tab</a>
+				</div>
+				<br>
+				<div class="bluemap-container" *ngIf="showBluemap">
+					<iframe class="bluemap" [src]="safeBluemapUrl" title="Shroomhearth BlueMap"></iframe>
+				</div>
+			</div>-->
+			<a [href]="bluemapUrl" target="_blank"><h4>Check out our Bluemap!</h4></a>
+
+			<hr>
+
 			<div class="datapack-info">
 				<p>Shroomhearth utilizes a bespoke datapack for additional gameplay features:</p>
 				<ul>
@@ -69,19 +83,6 @@
 					<li><a href="https://github.com/epolixa/Shroomhearth-Fabric" target="_blank">Shroomhearth's own Fabric mod</a></li>
 				</ul>
 				<p>You can still connect to the server with a vanilla Minecraft client.</p>
-			</div>
-
-			<hr>
-
-			<div class="bluemap-section">
-				<div class="bluemap-controls">
-					<button class="bluemap-toggle" (click)="toggleBluemap()">{{ (showBluemap ? "Hide" : "Show") + "
-						Bluemap" }}</button> or <a [href]="bluemapUrl" target="_blank">open in new tab</a>
-				</div>
-				<br>
-				<div class="bluemap-container" *ngIf="showBluemap">
-					<iframe class="bluemap" [src]="safeBluemapUrl" title="Shroomhearth BlueMap"></iframe>
-				</div>
 			</div>
 		</div>
 
