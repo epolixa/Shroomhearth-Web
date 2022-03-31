@@ -13,7 +13,7 @@ export class MinecraftComponent implements OnInit {
 
   public pageTitle:string = "Minecraft";
 
-  private showBluemap: boolean = false;
+  private showBluemap: boolean = true;
   private ip: string;
   private version: string;
   private online: boolean;
@@ -31,7 +31,7 @@ export class MinecraftComponent implements OnInit {
     ) {
     this.ip = this.minecraftService.getAddress();
     this.bluemapUrl = "http://" + this.ip + ":25570/";
-    this.safeBluemapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.bluemapUrl);
+    this.safeBluemapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.bluemapUrl + "#world:112:0:0:500:0:0:0:1:flat");
   }
 
   ngOnInit() {
