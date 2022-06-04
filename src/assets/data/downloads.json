@@ -7,6 +7,12 @@
             "path": "https://epolixa.com/shroomhearth/downloads/MINESMASH_20160501_1.8.3_FINAL.zip"
         },
         {
+            "title": "Minesmash 1.18 Optimized",
+            "thumbnail": "assets/images/thumbnail/minesmash.png",
+            "description": "Minesmash optimized for Minecraft version 1.18+",
+            "path": "https://epolixa.com/shroomhearth/downloads/MINESMASH_20220421_1.18.2_OPTIMIZED.zip"
+        },
+        {
             "title": "World 1",
             "thumbnail": "assets/images/thumbnail/world_1.png",
             "description": "The first Minecraft world of Shroomhearth",
