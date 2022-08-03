@@ -52,7 +52,7 @@ hr {
     margin: 0px;
 	font-weight: bold;
 	color: var(--color-cyan);
-	text-shadow: -2px 2px #000;
+	text-shadow: -2px 2px #002A2A;
 }
 
 .page-content {
