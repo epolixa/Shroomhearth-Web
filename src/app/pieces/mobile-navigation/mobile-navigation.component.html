@@ -1,0 +1,14 @@
+<nav id="mobile-navigation" class="mobile-navigation">
+	<div class="mobile-navigation-inner">
+		<button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Mobile Navigation">
+			<mat-icon>menu</mat-icon>
+		</button>
+		<mat-menu #menu="matMenu">
+			<button mat-menu-item *ngFor="let link of links" class="mobile-navigation-item">
+				<a class="mobile-navigation-link" routerLink="{{link.route}}">
+					<span class="mobile-navigation-text">{{ link.label }}</span>
+				</a>
+			</button>
+		</mat-menu>
+	</div>
+</nav>

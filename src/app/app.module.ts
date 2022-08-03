@@ -8,6 +8,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pieces/header/header.component';
 import { FooterComponent } from './pieces/footer/footer.component';
 import { NavigationComponent } from './pieces/navigation/navigation.component';
+import { MobileNavigationComponent } from './pieces/mobile-navigation/mobile-navigation.component';
 import { VideoCardComponent } from './pieces/video-card/video-card.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AboutComponent } from './pages/about/about.component';
@@ -16,8 +17,7 @@ import { MinecraftComponent } from './pages/minecraft/minecraft.component';
 import { DownloadsComponent } from './pages/downloads/downloads.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule } from '@angular/material';
-import { MatIconModule } from '@angular/material';
+import { MatTabsModule, MatIconModule, MatMenuModule } from '@angular/material';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
 
 @NgModule({
@@ -27,6 +27,7 @@ import { DownloadCardComponent } from './pieces/download-card/download-card.comp
 		HeaderComponent,
 		FooterComponent,
 		NavigationComponent,
+		MobileNavigationComponent,
 		VideoCardComponent,
 		AboutComponent,
 		LiveComponent,
@@ -43,7 +44,8 @@ import { DownloadCardComponent } from './pieces/download-card/download-card.comp
 		BrowserAnimationsModule,
 		MatCardModule,
 		MatTabsModule,
-		MatIconModule
+		MatIconModule,
+		MatMenuModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]

@@ -2,10 +2,20 @@
     background-image: url("/../../assets/images/mushroom_stemx128.png");
 }
 
+.navigation-section {
+    display: none;
+}
+
 .content-section {
     position: relative;
 }
 
 .footer-section {
     margin-top: 64px;
+}
+
+@media only screen and (min-width: 768px) {
+    .navigation-section {
+        display: block;
+    }
 }

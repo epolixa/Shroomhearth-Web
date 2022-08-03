@@ -57,3 +57,17 @@
 	text-shadow: -2px 2px #000;
 	justify-self: flex-end;
 }
+
+.mobile-nav-container {
+	position: absolute;
+	z-index: 1;
+	top: 10px;
+	right: 20px;
+}
+
+
+@media only screen and (min-width: 768px) {
+	.mobile-nav-container {
+		display: none;
+	}
+}
