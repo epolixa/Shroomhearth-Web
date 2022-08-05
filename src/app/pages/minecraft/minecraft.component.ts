@@ -47,6 +47,7 @@ export class MinecraftComponent implements OnInit {
             reader.addEventListener("load", () => {
               this.avatars.push({
                 name: u,
+                namemc: this.buildNameMcUrl(uuid[u]),
                 src: reader.result
               });
             }, false);
@@ -63,6 +64,10 @@ export class MinecraftComponent implements OnInit {
 
   public toggleBluemap() {
     this.showBluemap = !this.showBluemap;
+  }
+
+  public buildNameMcUrl(uuid: string) {
+    return "https://namemc.com/search?q=" + uuid;
   }
 
 }
