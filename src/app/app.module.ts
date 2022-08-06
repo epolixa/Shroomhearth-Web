@@ -19,6 +19,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule, MatIconModule, MatMenuModule } from '@angular/material';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
 	declarations: [
@@ -45,7 +46,8 @@ import { DownloadCardComponent } from './pieces/download-card/download-card.comp
 		MatCardModule,
 		MatTabsModule,
 		MatIconModule,
-		MatMenuModule
+		MatMenuModule,
+		SlickCarouselModule
 	],
 	providers: [],
 	bootstrap: [AppComponent]
