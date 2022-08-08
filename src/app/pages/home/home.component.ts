@@ -12,12 +12,24 @@ export class HomeComponent implements OnInit {
 
   public shroomhearthName:string;
 
+  public slides = [];
+  public slideConfig = {
+    autoplay: true,
+    arrows: false
+  };
+
   constructor(
     private shroomhearth:ShroomhearthService
   ) {}
 
   ngOnInit() {
     this.shroomhearthName = this.shroomhearth.getName();
+
+    // init slides
+    for (let i = 1; i <= 30; i++) {
+      this.slides.push({img: "assets/images/home_slideshow/slide_" + i + ".png"});
+    }
+    this.slides = this.shroomhearth.shuffleArray(this.slides);
   }
 
 }
