@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -19,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule, MatIconModule, MatMenuModule } from '@angular/material';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
 	declarations: [
@@ -45,9 +47,10 @@ import { DownloadCardComponent } from './pieces/download-card/download-card.comp
 		MatCardModule,
 		MatTabsModule,
 		MatIconModule,
-		MatMenuModule
+		MatMenuModule,
+		SlickCarouselModule
 	],
-	providers: [],
+	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]
 })
 export class AppModule { }
