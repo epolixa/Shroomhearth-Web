@@ -8,7 +8,7 @@ import frens from '../assets/data/frens.json';
 })
 export class MinecraftService {
 
-  private address:string = "102.129.206.145";
+  private address:string = "38.133.155.232";
   private serverStatusUrl:string = "https://api.mcsrvstat.us/2/"; // https://api.mcsrvstat.us/
   private avatarUrl:string = "https://crafatar.com/avatars/"; // https://crafatar.com/
   private headRenderUrl:string = "https://crafatar.com/renders/head/";
