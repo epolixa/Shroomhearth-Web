@@ -17,8 +17,8 @@ export class LiveComponent implements OnInit {
 	private twitchVideosSub: Subscription;
 
 	public twitchUsers: any[] = [];
-	private twitchStreams: any[] = [];
-	private twitchVideos: any[] = [];
+	public twitchStreams: any[] = [];
+	public twitchVideos: any[] = [];
 
 	constructor(private twitchService: TwitchService) { }
 

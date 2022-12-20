@@ -14,11 +14,11 @@ export class MinecraftComponent implements OnInit {
   public pageTitle:string = "Minecraft";
 
   private showBluemap: boolean = true;
-  private ip: string;
-  private version: string;
-  private online: boolean;
-  private avatars: any[];
-  private bluemapUrl: string;
+  public ip: string;
+  public version: string;
+  public online: boolean;
+  public avatars: any[];
+  public bluemapUrl: string;
   private safeBluemapUrl: SafeResourceUrl;
 
   private minecraftServerStatusSub:Subscription;

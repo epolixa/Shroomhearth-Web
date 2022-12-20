@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavigationComponent implements OnInit {
 
-	private links: { label: string, route: string }[];
+	public links: { label: string, route: string }[];
 
 	constructor() { }
 

@@ -11,10 +11,10 @@ import { MinecraftService } from '../../minecraft.service';
 export class HeaderComponent implements OnInit {
 
   private titleText: string;
-  private bannerSource: string;
-  private titleLogoSource: string;
-  private titleWordartSource: string;
-  private taglineText: string;
+  public bannerSource: string;
+  public titleLogoSource: string;
+  public titleWordartSource: string;
+  public taglineText: string;
 
   private minecraftServerStatusSub: Subscription;
 

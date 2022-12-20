@@ -3,7 +3,6 @@ import { NgModule } from '@angular/core';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './pieces/header/header.component';
@@ -18,9 +17,12 @@ import { MinecraftComponent } from './pages/minecraft/minecraft.component';
 import { DownloadsComponent } from './pages/downloads/downloads.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatCardModule } from '@angular/material/card';
-import { MatTabsModule, MatIconModule, MatMenuModule } from '@angular/material';
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatIconModule } from '@angular/material/icon';
+import { MatMenuModule } from '@angular/material/menu';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
-import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { FormsModule } from '@angular/forms';
+//import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
 	declarations: [
@@ -47,8 +49,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 		MatCardModule,
 		MatTabsModule,
 		MatIconModule,
-		MatMenuModule,
-		SlickCarouselModule
+		MatMenuModule
+		//SlickCarouselModule
 	],
 	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]
