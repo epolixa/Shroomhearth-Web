@@ -28,7 +28,6 @@
     display: block;
     position: relative;
     height: 32px;
-    padding: 10px 0px;
     text-decoration: none; 
     color: var(--color-beige);
 }

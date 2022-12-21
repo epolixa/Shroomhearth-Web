@@ -22,7 +22,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatMenuModule } from '@angular/material/menu';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
 import { FormsModule } from '@angular/forms';
-//import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 @NgModule({
 	declarations: [
@@ -49,8 +49,8 @@ import { FormsModule } from '@angular/forms';
 		MatCardModule,
 		MatTabsModule,
 		MatIconModule,
-		MatMenuModule
-		//SlickCarouselModule
+		MatMenuModule,
+		SlickCarouselModule
 	],
 	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]
