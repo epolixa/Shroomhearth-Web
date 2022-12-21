@@ -1,7 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 
-/* Rubik */
-@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+/* Noto Sans */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 /* Minecraft */
 @font-face {font-family: "Minecraft";
@@ -21,7 +21,7 @@
 }
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Rubik', "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: 'Noto Sans', "Helvetica Neue", sans-serif; }
 
 a {
 	color: var(--color-cyan);
