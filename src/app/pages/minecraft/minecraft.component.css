@@ -16,6 +16,7 @@
 
 .player {
 	display: block;
+	text-decoration: none;
 }
 
 .player-name {
