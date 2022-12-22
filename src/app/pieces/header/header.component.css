@@ -53,9 +53,13 @@
 }
 
 .header-tagline {
+	display: none;
 	color: var(--color-beige);
 	text-shadow: -2px 2px #000;
 	justify-self: flex-end;
+}
+.header-tagline:hover {
+	transform: rotate(-5deg);
 }
 
 .mobile-nav-container {
@@ -69,5 +73,9 @@
 @media only screen and (min-width: 768px) {
 	.mobile-nav-container {
 		display: none;
+	}
+
+	.header-tagline {
+		display: block;
 	}
 }
