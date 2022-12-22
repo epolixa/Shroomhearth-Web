@@ -20,12 +20,14 @@
 			<div class="players">
 				<h5 *ngIf="avatars.length > 0; else noPlayers">{{ avatars.length }} Players Online:</h5>
 				<ng-template #noPlayers><h5>No Players Online...</h5></ng-template>
-				<div *ngFor="let av of avatars">
-					<a href="{{av.namemc}}" target="_blank">
-						<img src={{av.src}}>
-						<span class="mctext">{{av.name}}</span>
-					</a>
-				</div>
+				<div class="player-list">
+					<div class="player-wrap" *ngFor="let av of avatars">
+						<a class="player" href="{{av.namemc}}" target="_blank">
+							<span class="mctext player-name">{{av.name}}</span>
+							<img class="player-img" src={{av.src}}>
+						</a>
+					</div>
+				</div>				
 			</div>
 
 			<hr>
