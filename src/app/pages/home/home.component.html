@@ -14,6 +14,7 @@
 			<ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
 				<div ngxSlickItem *ngFor="let slide of slides" class="slide">
 					<img src="{{ slide.img }}" alt="" width="100%">
+					<p>{{slide.caption}}</p>
 				</div>
 			</ngx-slick-carousel>
 		</div>
