@@ -8,6 +8,7 @@
 
 .player-list {
 	display: flex;
+	flex-wrap: wrap;
 }
 
 .player-wrap {
