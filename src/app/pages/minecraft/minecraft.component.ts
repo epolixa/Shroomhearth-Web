@@ -30,7 +30,7 @@ export class MinecraftComponent implements OnInit {
     private sanitizer:DomSanitizer
     ) {
     this.ip = this.minecraftService.getAddress();
-    this.bluemapUrl = "http://" + this.ip + ":25570/";
+    this.bluemapUrl = "http://" + this.ip + ":25569/";
     this.safeBluemapUrl = this.sanitizer.bypassSecurityTrustResourceUrl(this.bluemapUrl + "#world:112:0:0:500:0:0:0:1:flat");
   }
 
