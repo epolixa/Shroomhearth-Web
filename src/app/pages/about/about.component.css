@@ -1,0 +1,7 @@
+.history {
+    display: flex
+}
+
+.summary-area {
+    flex-shrink: 3;
+}

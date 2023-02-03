@@ -23,6 +23,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { DownloadCardComponent } from './pieces/download-card/download-card.component';
 import { FormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import { TimelineModule } from 'primeng/timeline';
 
 @NgModule({
 	declarations: [
@@ -50,7 +51,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 		MatTabsModule,
 		MatIconModule,
 		MatMenuModule,
-		SlickCarouselModule
+		SlickCarouselModule,
+		TimelineModule
 	],
 	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]
