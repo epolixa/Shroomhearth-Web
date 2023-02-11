@@ -45,3 +45,9 @@
   	bottom: 0;
   	right: 0;
 }
+
+.datapack-feature-cards {
+	display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

@@ -4,6 +4,8 @@ import { MinecraftService } from '../../minecraft.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; 
 import { ScriptService } from 'src/app/script.service';
 
+import features from 'src/assets/data/features.json';
+
 @Component({
   selector: 'app-minecraft',
   templateUrl: './minecraft.component.html',
@@ -24,6 +26,8 @@ export class MinecraftComponent implements OnInit {
   private minecraftServerStatusSub:Subscription;
   private minecraftAvatarSub:Subscription;
 
+  public datapackFeatures:any;
+
   constructor(
     private minecraftService:MinecraftService,
     private script:ScriptService,
@@ -35,6 +39,8 @@ export class MinecraftComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.datapackFeatures = features.datapack;
+
     this.avatars = [];
     this.minecraftServerStatusSub = this.minecraftService.getServerStatus().subscribe(response => {
       this.version = response.version;

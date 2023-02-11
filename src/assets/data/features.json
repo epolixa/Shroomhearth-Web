@@ -1,0 +1,16 @@
+{
+    "datapack": [
+        {
+            "title": "The Porcelain",
+            "description": "A custom dimension where players can freely use Creative mode.",
+            "image": "assets/images/home_slideshow/slide_20.png",
+            "tags": ["datapack", "dimensions", "items"]
+        },
+        {
+            "title": "Empowered Ender Dragon",
+            "description": "The Ender Dragon is capable of summoning mobs, lightning, etc.",
+            "image": "assets/images/home_slideshow/slide_30.png",
+            "tags": ["datapack", "dimensions", "entities"]
+        }
+    ]
+}

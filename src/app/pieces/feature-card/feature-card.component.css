@@ -1,0 +1,17 @@
+.feature-card {
+    display: flex;
+}
+
+.feature-card-left img {
+    height: 256px;
+}
+
+.feature-card-right {
+    padding: 16px;
+    flex-grow: 1;
+}
+
+.feature-card-tags {
+    display: flex;
+    gap: 4px;
+}

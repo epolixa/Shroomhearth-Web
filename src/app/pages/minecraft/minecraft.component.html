@@ -59,20 +59,11 @@
 			<hr>
 
 			<div class="datapack-info">
-				<p>Shroomhearth utilizes a bespoke datapack for additional gameplay features:</p>
-				<ul>
-					<li>Many advancements to guide through Shroomhearth's features as well as player-made challenges</li>
-					<li>The Porcelain, a creative mode custom dimension</li>
-					<li>An evolved Ender Dragon fight</li>
-					<li>End Crystals that ward hostile mob spawns</li>
-					<li>Community Scoreboard that increases with time spent nearby other players</li>
-					<li>Additional experience from certain interactions like looting a chest or curing a zombie villager</li>
-					<li>Some modified recipes for QOL such as an expanded use for the Stonecutter</li>
-					<li>Mob Spawn Eggs harvestable from Mob Spawners</li>
-					<li>Speedy Paths</li>
-					<li>And more...!</li>
-				</ul>
+				<p>Shroomhearth utilizes a bespoke datapack for additional gameplay features.</p>
 				<p>Check out the datapack <a href="https://github.com/epolixa/Shroomhearth-Datapack" target="_blank">source</a> or view the <a href="https://github.com/epolixa/Shroomhearth-Datapack/wiki" target="_blank">wiki</a> for more information.</p>
+				<div class="datapack-feature-cards">
+					<shroomhearth-feature-card *ngFor="let f of datapackFeatures" [title]="f.title" [description]="f.description" [image]="f.image" [tags]="f.tags"></shroomhearth-feature-card>
+				</div>
 			</div>
 
 			<hr>

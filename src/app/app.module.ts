@@ -24,6 +24,7 @@ import { DownloadCardComponent } from './pieces/download-card/download-card.comp
 import { FormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TimelineModule } from 'primeng/timeline';
+import { FeatureCardComponent } from './pieces/feature-card/feature-card.component';
 
 @NgModule({
 	declarations: [
@@ -38,7 +39,8 @@ import { TimelineModule } from 'primeng/timeline';
 		LiveComponent,
 		MinecraftComponent,
 		DownloadsComponent,
-		DownloadCardComponent
+		DownloadCardComponent,
+		FeatureCardComponent
 	],
 	imports: [
 		BrowserModule,
