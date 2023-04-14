@@ -3,6 +3,8 @@ import { Subscription } from 'rxjs';
 import { MinecraftService } from '../../minecraft.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; 
 import { ScriptService } from 'src/app/script.service';
+import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
+
 
 import features from 'src/assets/data/features.json';
 

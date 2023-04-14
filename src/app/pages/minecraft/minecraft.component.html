@@ -13,13 +13,16 @@
 			<div class="server-info">
 				<h4>Server Info:</h4>
 				<p>IP: {{ ip }}</p>
-				<p [ngClass]="{'online': online, 'offline': !online}">Status: <span>{{ online ? "Online" : "Offline"}}</span></p>
+				<p [ngClass]="{'online': online, 'offline': !online}">Status: <span>{{ online ? "Online" :
+						"Offline"}}</span></p>
 				<p *ngIf="online">Version: {{ version }}</p>
 			</div>
 
 			<div class="players">
 				<h5 *ngIf="avatars.length > 0; else noPlayers">{{ avatars.length }} Players Online:</h5>
-				<ng-template #noPlayers><h5>No Players Online...</h5></ng-template>
+				<ng-template #noPlayers>
+					<h5>No Players Online...</h5>
+				</ng-template>
 				<div class="player-list">
 					<div class="player-wrap" *ngFor="let av of avatars">
 						<a class="player" href="{{av.namemc}}" target="_blank">
@@ -27,10 +30,10 @@
 							<img class="player-img" src={{av.src}}>
 						</a>
 					</div>
-				</div>				
+				</div>
 			</div>
 
-			<hr>			
+			<hr>
 
 			<div class="bluemap-section">
 				<h4>Check out our Bluemap!</h4>
@@ -48,9 +51,16 @@
 
 			<div class="datapack-info">
 				<p>Shroomhearth utilizes a bespoke datapack for additional gameplay features.</p>
-				<p>Check out the datapack <a href="https://github.com/epolixa/Shroomhearth-Datapack" target="_blank">source</a> or view the <a href="https://github.com/epolixa/Shroomhearth-Datapack/wiki" target="_blank">wiki</a> for more information.</p>
+				<p>Check out the datapack <a href="https://github.com/epolixa/Shroomhearth-Datapack"
+						target="_blank">source</a> or view the <a
+						href="https://github.com/epolixa/Shroomhearth-Datapack/wiki" target="_blank">wiki</a> for more
+					information.</p>
 				<div class="datapack-feature-cards">
-					<shroomhearth-feature-card *ngFor="let f of datapackFeatures" [title]="f.title" [description]="f.description" [image]="f.image" [tags]="f.tags"></shroomhearth-feature-card>
+					<p-dataView #dv [value]="datapackFeatures" [rows]="3" [paginator]="true">
+						<ng-template let-f pTemplate="listItem">
+							<shroomhearth-feature-card [title]="f.title" [description]="f.description" [image]="f.image" [tags]="f.tags"></shroomhearth-feature-card>
+						</ng-template>
+					</p-dataView>
 				</div>
 			</div>
 
@@ -72,10 +82,12 @@
 					<li><a href="https://bluemap.bluecolored.de/" target="_blank">BlueMap</a></li>
 					<li><a href="https://www.curseforge.com/minecraft/mc-mods/ledger" target="_blank">Ledger</a></li>
 					<li><a href="https://www.curseforge.com/minecraft/mc-mods/krypton" target="_blank">Krypton</a></li>
-					<li><a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank">Simple Voice Chat</a></li>
+					<li><a href="https://www.curseforge.com/minecraft/mc-mods/simple-voice-chat" target="_blank">Simple
+							Voice Chat</a></li>
 					<li><a href="https://www.curseforge.com/minecraft/mc-mods/carpet" target="_blank">Carpet</a></li>
 					<li><a href="https://modrinth.com/mod/horsebuff" target="_blank">HorseBuff</a></li>
-					<li><a href="https://github.com/epolixa/Shroomhearth-Fabric" target="_blank">Shroomhearth's own Fabric mod</a></li>
+					<li><a href="https://github.com/epolixa/Shroomhearth-Fabric" target="_blank">Shroomhearth's own
+							Fabric mod</a></li>
 				</ul>
 				<p>You can still connect to the server with a vanilla Minecraft client.</p>
 			</div>

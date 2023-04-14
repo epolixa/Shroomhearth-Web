@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TimelineModule } from 'primeng/timeline';
 import { FeatureCardComponent } from './pieces/feature-card/feature-card.component';
+import { DataViewModule } from 'primeng/dataview';
 
 @NgModule({
 	declarations: [
@@ -54,7 +55,8 @@ import { FeatureCardComponent } from './pieces/feature-card/feature-card.compone
 		MatIconModule,
 		MatMenuModule,
 		SlickCarouselModule,
-		TimelineModule
+		TimelineModule,
+		DataViewModule
 	],
 	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]
