@@ -1,16 +1,64 @@
 {
     "datapack": [
         {
-            "title": "The Porcelain",
-            "description": "A custom dimension where players can freely use Creative mode.",
-            "image": "assets/images/home_slideshow/slide_20.png",
-            "tags": ["datapack", "dimensions", "items"]
+            "title": "PvP Arenas",
+            "description": "Certain spaces on the server are designated as \"Arenas\" where pvp combat is encouraged and rewarded with Harmony.",
+            "image": "",
+            "tags": ["datapack", "community"]
+        },
+        {
+            "title": "Harmony",
+            "description": "A scoreboard objective that accumulates when interacting with other players and decays while alone.",
+            "image": "",
+            "tags": ["datapack", "community"]
+        },
+        {
+            "title": "Charms",
+            "description": "Tokens of quality time that may be minted by players with high Harmony.",
+            "image": "",
+            "tags": ["datapack", "community", "items"]
+        },
+        {
+            "title": "Favors",
+            "description": "Limited-time, server-wide benefits or special events that players can activate by spending a Charm.",
+            "image": "",
+            "tags": ["datapack", "community"]
+        },
+        {
+            "title": "Harmonized Chorus Fruit",
+            "description": "A special Chorus Fruit made with a Charm that allows players to teleport to each other.",
+            "image": "",
+            "tags": ["datapack", "community", "items"]
+        },
+        {
+            "title": "Endchanting",
+            "description": "Enchantments one level beyond the vanilla maximum (for instance, Sharpness VI) are bestowed to players' equipped items when defeating the Ender Dragon.",
+            "image": "",
+            "tags": ["datapack", "items"]
         },
         {
             "title": "Empowered Ender Dragon",
             "description": "The Ender Dragon is capable of summoning mobs, lightning, etc.",
             "image": "assets/images/home_slideshow/slide_30.png",
             "tags": ["datapack", "dimensions", "entities"]
+        },
+        {
+            "title": "Extra Experience",
+            "description": "Certain activities grant experience, such as looting chests, taming mobs, or curing Zombie Villagers.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "Haberdasher",
+            "description": "Players can put arbitrary items in their head slot or create player heads at the World Hall.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "The Porcelain",
+            "description": "A custom dimension where players can freely use Creative mode.",
+            "image": "assets/images/home_slideshow/slide_20.png",
+            "tags": ["datapack", "dimensions", "items"]
         }
     ]
 }
