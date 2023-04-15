@@ -38,8 +38,9 @@
 			<div class="bluemap-section">
 				<h4>Check out our Bluemap!</h4>
 				<div class="bluemap-controls">
-					<button class="bluemap-toggle" (click)="toggleBluemap()">{{ (showBluemap ? "Hide" : "Show") + "
-						Bluemap" }}</button> or <a [href]="bluemapUrl" target="_blank">open in new tab</a>
+					<p-selectButton [options]="bluemapStateOptions" [(ngModel)]="showBluemap" optionLabel="label" optionValue="value"></p-selectButton>
+					 OR 
+					<a [href]="bluemapUrl" target="_blank"><p-button label="Open in New Tab"></p-button></a>
 				</div>
 				<br>
 				<div class="bluemap-container" *ngIf="showBluemap">
@@ -58,7 +59,9 @@
 				<div class="datapack-feature-cards">
 					<p-dataView #dv [value]="datapackFeatures" [rows]="3" [paginator]="true">
 						<ng-template let-f pTemplate="listItem">
-							<shroomhearth-feature-card [title]="f.title" [description]="f.description" [image]="f.image" [tags]="f.tags"></shroomhearth-feature-card>
+							<div class="feature-card-wrap">
+								<shroomhearth-feature-card [title]="f.title" [description]="f.description" [image]="f.image" [tags]="f.tags"></shroomhearth-feature-card>
+							</div>
 						</ng-template>
 					</p-dataView>
 				</div>

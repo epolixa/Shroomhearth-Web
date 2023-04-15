@@ -12,8 +12,14 @@ export class FeatureCardComponent implements OnInit {
   @Input() description:string;
   @Input() tags:string[];
 
+  public state:"collapsed"|"expanded" = "collapsed";
+
   constructor() {}
 
   ngOnInit() {}
+
+  public toggleState() {
+    this.state == "collapsed" ? this.state = "expanded" : this.state = "collapsed";
+  }
 
 }

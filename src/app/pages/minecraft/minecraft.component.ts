@@ -4,6 +4,8 @@ import { MinecraftService } from '../../minecraft.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser'; 
 import { ScriptService } from 'src/app/script.service';
 import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
+import { SelectButtonModule } from 'primeng/selectbutton';
+import { ButtonModule } from 'primeng/button';
 
 
 import features from 'src/assets/data/features.json';
@@ -18,6 +20,7 @@ export class MinecraftComponent implements OnInit {
   public pageTitle:string = "Minecraft";
 
   public showBluemap: boolean = false;
+  public bluemapStateOptions: any[] = [{label:"Hide",value:false},{label:"Show",value:true}];
   public ip: string;
   public version: string;
   public online: boolean;

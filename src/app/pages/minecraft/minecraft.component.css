@@ -31,23 +31,36 @@
 	margin: 0 auto;
 }
 
+.bluemap-controls {
+	display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
 .bluemap-container {
-	padding-top: 56.25%;
-	position: relative;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .bluemap {
-	width: 100%;
-	height: 100%;
-	position: absolute;
-  	top: 0;
-  	left: 0;
-  	bottom: 0;
-  	right: 0;
+	width: 512px;
+	height: 512px;	
 }
 
-.datapack-feature-cards {
+/*.datapack-feature-cards {
 	display: flex;
     flex-direction: column;
     gap: 20px;
+}*/
+
+.feature-card-wrap {
+	margin: 4px;
+}
+
+:host ::ng-deep .p-dataview .p-dataview-content {
+	background: transparent;
+}
+:host ::ng-deep .p-paginator {
+	background: transparent;
 }

@@ -58,7 +58,7 @@ export class LiveComponent implements OnInit {
 	}
 
 	filterVideo(v:any) {
-		return v.thumbnail_url.length > 0 // exclude vods of incomplete streams
+		return v.thumbnail_url.length > 0 && !v.thumbnail_url.includes("404_processing_") // exclude vods of incomplete streams
 		&& v.type == "archive"; // only include past broadcasts
 	}
 

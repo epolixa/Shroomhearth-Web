@@ -26,6 +26,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 import { TimelineModule } from 'primeng/timeline';
 import { FeatureCardComponent } from './pieces/feature-card/feature-card.component';
 import { DataViewModule } from 'primeng/dataview';
+import { ButtonModule } from 'primeng/button';
+import { SelectButtonModule } from 'primeng/selectbutton';
 
 @NgModule({
 	declarations: [
@@ -56,7 +58,9 @@ import { DataViewModule } from 'primeng/dataview';
 		MatMenuModule,
 		SlickCarouselModule,
 		TimelineModule,
-		DataViewModule
+		DataViewModule,
+		ButtonModule,
+		SelectButtonModule
 	],
 	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]

@@ -11,6 +11,11 @@
     flex-grow: 1;
 }
 
+.feature-card-header {
+    cursor: pointer;
+    color: var(--color-cyan);
+}
+
 .feature-card-tags {
     display: flex;
     gap: 4px;
