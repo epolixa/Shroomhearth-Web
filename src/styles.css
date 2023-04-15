@@ -49,7 +49,7 @@ hr {
 }
 .page-title-inner {
 	width: 90%;
-    max-width: 1440px;
+    max-width: 1080px;
     margin: auto;
     padding: 10px;
 }
@@ -63,7 +63,7 @@ hr {
 .page-content {
 	min-height: 500px;
 	width: 90%;
-    max-width: 1440px;
+    max-width: 1080px;
     margin: auto;
     padding: 10px 20px;
 	background-color: var(--color-offwhite);
