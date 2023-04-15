@@ -38,7 +38,7 @@
         },
         {
             "title": "Empowered Ender Dragon",
-            "description": "The Ender Dragon is capable of summoning mobs, lightning, etc.",
+            "description": "The Ender Dragon is capable of summoning mobs, lightning, etc. More players makes the Dragon stronger.",
             "image": "assets/images/home_slideshow/slide_30.png",
             "tags": ["datapack", "dimensions", "entities"]
         },
