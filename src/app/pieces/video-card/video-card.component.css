@@ -35,3 +35,7 @@
   font-size: 12px;
   margin-bottom: 6px;
 }
+
+.video-card-thumbnail-img {
+  display: block;
+}
