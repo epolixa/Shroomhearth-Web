@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MatChipsModule } from '@angular/material/chips';
 
 @Component({
   selector: 'shroomhearth-feature-card',

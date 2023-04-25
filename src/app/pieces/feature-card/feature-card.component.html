@@ -9,11 +9,10 @@
         <mat-card-content *ngIf="state == 'expanded'">
             <p> {{ description }} </p>
             <hr>
-            <div class=feature-card-tags>
-                <div class="feature-card-tag" *ngFor="let tag of tags">
-                    <span>{{ tag }}</span>
-                </div>
-            </div>
+            <mat-chip-list class=feature-card-tags>
+                Tags: 
+                <mat-chip class="feature-card-tag" *ngFor="let tag of tags">{{ tag | titlecase }}</mat-chip>
+            </mat-chip-list>
         </mat-card-content>
     </div>
 </mat-card>

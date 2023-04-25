@@ -6,6 +6,7 @@ import { ScriptService } from 'src/app/script.service';
 import { DataViewModule, DataViewLayoutOptions } from 'primeng/dataview';
 import { SelectButtonModule } from 'primeng/selectbutton';
 import { ButtonModule } from 'primeng/button';
+import { InputTextModule } from 'primeng/inputtext';
 
 
 import features from 'src/assets/data/features.json';

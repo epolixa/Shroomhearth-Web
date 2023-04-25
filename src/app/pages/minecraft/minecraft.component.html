@@ -57,7 +57,10 @@
 						href="https://github.com/epolixa/Shroomhearth-Datapack/wiki" target="_blank">wiki</a> for more
 					information.</p>
 				<div class="datapack-feature-cards">
-					<p-dataView #dv [value]="datapackFeatures" [rows]="3" [paginator]="true">
+					<p-dataView #dv [value]="datapackFeatures" [rows]="3" [paginator]="true" filterBy="tags">
+						<ng-template pTemplate="header">
+							<input type="search" pInputText placeholder="Search by tags" (input)="dv.filter($event.target.value, 'contains')">
+						</ng-template>
 						<ng-template let-f pTemplate="listItem">
 							<div class="feature-card-wrap">
 								<shroomhearth-feature-card [title]="f.title" [description]="f.description" [image]="f.image" [tags]="f.tags"></shroomhearth-feature-card>

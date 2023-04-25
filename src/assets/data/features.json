@@ -59,6 +59,96 @@
             "description": "A custom dimension where players can freely use Creative mode.",
             "image": "assets/images/home_slideshow/slide_20.png",
             "tags": ["datapack", "dimensions", "items"]
+        },
+        {
+            "title": "Item Entity Persistence",
+            "description": "Certain items, when named, will not despawn as entities.",
+            "image": "",
+            "tags": ["datapack", "items"]
+        },
+        {
+            "title": "Glowing Glow Berries",
+            "description": "Glow Berries provide a brief Glowing effect when eaten.",
+            "image": "",
+            "tags": ["datapack", "items"]
+        },
+        {
+            "title": "Named Armor Stands",
+            "description": "Name Tags can be used on Armor Stands.",
+            "image": "",
+            "tags": ["datapack", "entities", "items"]
+        },
+        {
+            "title": "Relic Items",
+            "description": "Certain equipment, tools, or weapons may have a unique look, dropped by mobs or acquired by other special circumstances.",
+            "image": "",
+            "tags": ["datapack", "items"]
+        },
+        {
+            "title": "Mob Warding",
+            "description": "End Crystals can be used to ward certain mobs within a 32-block cubic radius.",
+            "image": "",
+            "tags": ["datapack", "entities"]
+        },
+        {
+            "title": "Event Announcements",
+            "description": "The Ender Dragon, Pillager Raids, Wither, and Wandering Trader send announcements in chat when triggered by players.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "Player Advancements",
+            "description": "A slew of player-designed or inspired advancements are available to challenge.",
+            "image": "",
+            "tags": ["datapack", "community"]
+        },
+        {
+            "title": "Random TP",
+            "description": "Players can teleport to a random place in the overworld by eating a Chorus Fruit at spawn.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "Recall Whistle",
+            "description": "Players can teleport to their current spawn point by using a Recall Whistle.",
+            "image": "",
+            "tags": ["datapack", "items"]
+        },
+        {
+            "title": "Sitting",
+            "description": "Players can sit on upward-facing, empty Item Frames. The Item Frame becomes invisible while sitting on it and the player's sitting position is aligned to the logical height of the block that the Item Frame is attached to.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "Cooperative Sleeping",
+            "description": "The night passes faster when a player is sleeping. The more players that sleep, the faster night passes.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "Spawner Eggs",
+            "description": "Mob Spawners will drop a Spawn Egg of their respective mob when mined.",
+            "image": "",
+            "tags": ["datapack", "items", "blocks"]
+        },
+        {
+            "title": "Speedy Paths",
+            "description": "Sprinting on Dirt Path blocks gives players a Speed effect.",
+            "image": "",
+            "tags": ["datapack", "blocks"]
+        },
+        {
+            "title": "Visual Status",
+            "description": "Players at critical health will emit \"hurt\" particles. Players who may attract Phantoms will emit \"sleepy\" particles. Players who are hungry will emit quiet \"gurgling\" sounds.",
+            "image": "",
+            "tags": ["datapack"]
+        },
+        {
+            "title": "Wilderness",
+            "description": "The \"Wilderness\" is the region outside the 10,000 block square radius around spawn that may be entirely reset for future versions of Minecraft.",
+            "image": "",
+            "tags": ["datapack"]
         }
     ]
 }

@@ -28,6 +28,8 @@ import { FeatureCardComponent } from './pieces/feature-card/feature-card.compone
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { SelectButtonModule } from 'primeng/selectbutton';
+import { MatChipsModule } from '@angular/material/chips';
+import { InputTextModule } from 'primeng/inputtext';
 
 @NgModule({
 	declarations: [
@@ -60,7 +62,9 @@ import { SelectButtonModule } from 'primeng/selectbutton';
 		TimelineModule,
 		DataViewModule,
 		ButtonModule,
-		SelectButtonModule
+		SelectButtonModule,
+		MatChipsModule,
+		InputTextModule
 	],
 	providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
 	bootstrap: [AppComponent]
